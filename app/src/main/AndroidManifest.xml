@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Licious">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".activities.HomeActivity">
+        <activity android:name=".Category"/>
+        <activity android:name=".LoginScreenTwo"/>
+        <activity android:name=".activities.HomeActivity"/>
+        <activity android:name=".LoginScreenOne">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/loginParent"
+    tools:context=".LoginScreenOne">
+
+    <TextView
+        android:id="@+id/tvSkipOne"
+        style="@style/loginSkip" />
+
+    <RelativeLayout style="@style/loginParentTwo">
+
+        <TextView
+            android:id="@+id/tvSigninSignupOne"
+            style="@style/signinTextView" />
+
+        <TextView
+            android:id="@+id/tvMandatoryOne"
+            style="@style/mandatoryTextView"
+            android:layout_below="@id/tvSigninSignupOne" />
+
+        <RelativeLayout
+            style="@style/loginParentThree"
+            android:layout_below="@id/tvMandatoryOne">
+
+            <TextView
+                android:id="@+id/tvMobileNumberOne"
+                style="@style/matchStyle"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/mobile_number"
+                android:textColor="@color/dark_grey"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etMobileNumberOne"
+                style="@style/matchStyle"
+                android:layout_below="@id/tvMobileNumberOne"
+                android:autofillHints="phone"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+            <Button
+                android:id="@+id/btnOtpOne"
+                style="@style/matchStyle"
+                android:background="@drawable/rectangle_button"
+                android:layout_below="@id/etMobileNumberOne"
+                android:text="@string/proceed"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvSigninAgreementOne"
+                style="@style/wrapStyle"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_below="@id/btnOtpOne"
+                android:layout_marginStart="@dimen/dp_50"
+                android:text="@string/signin_agreement"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tvTermsOne"
+                style="@style/wrapStyle"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:textSize="@dimen/sp_10"
+                android:layout_below="@id/btnOtpOne"
+                android:layout_marginStart="@dimen/dp_2"
+                android:layout_toEndOf="@id/tvSigninAgreementOne"
+                android:text="@string/terms"
+                android:textColor="@color/red"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
