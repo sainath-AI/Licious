@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Licious</string>
+    <string name="bengalore">Bengalore</string>
+    <string name="bengalore_karnataka">Bengalore,Karnataka</string>
+    <string name="navigation_drawrer_open">open navigation drawer</string>
+    <string name="navigation_drawrer_close">close navigation drawer</string>
+    <string name="best_sellers">Best Sellers</string>
 </resources>
