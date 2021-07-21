@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/home"/>
+        <item
+            android:id="@+id/nav_MyAccount"
+            android:title="My Account"
+            android:icon="@drawable/account"/>
+        <item
+        android:id="@+id/nav_ContactUs"
+        android:title="Contact Us"
+        android:icon="@drawable/save"/>
+        <item
+            android:id="@+id/nav_Refer"
+            android:title="Refer Friend"
+            android:icon="@drawable/megaphone"/>
+
+    </group>
+
+    <item android:title="Licious Zone">
+        <menu>
+            <item
+                android:id="@+id/nav_Recipe"
+                android:icon="@drawable/chef"
+                android:title="Recipe" />
+            <item
+                android:id="@+id/nav_wallet"
+                android:icon="@drawable/wallet"
+                android:title="My Wallet" />
+            <item
+                android:id="@+id/nav_friends"
+                android:icon="@drawable/share"
+                android:title="share with love" />
+        </menu>
+
+
+    </item>
+
+
+
+</menu>
