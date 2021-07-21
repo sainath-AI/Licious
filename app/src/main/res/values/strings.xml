@@ -1,5 +1,29 @@
 <resources>
     <string name="app_name">Licious</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="skip">Skip</string>
+    <string name="sign_in_sign_up">Sign In/Sign Up</string>
+    <string name="sign_in_mandatory">This is mandatory in order to complete checkout and stand a chance to get rewarded!</string>
+    <string name="proceed">PROCEED VIA OTP</string>
+    <string name="signin_agreement">By signing in you agree to our</string>
+    <string name="terms">terms and conditions</string>
+    <string name="otp_sent">An OTP has been sent to your Mobile Number</string>
+    <string name="confirm">Confirm OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="edit_number">EDIT NUMBER</string>
+    <string name="resend">RESEND</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="weight">Weight</string>
+    <string name="price">Price</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="click_to_see_video">Click to see video</string>
+    <string name="delivery_time">Delivery time</string>
+    <string name="bengalore">Bengalore</string>
+    <string name="bengalore_karnataka">Bengalore,Karnataka</string>
+    <string name="navigation_drawrer_open">open navigation drawer</string>
+    <string name="navigation_drawrer_close">close navigation drawer</string>
+    <string name="best_sellers">Best Sellers</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

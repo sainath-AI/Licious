@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/matchStyle"
+    android:layout_margin="@dimen/dp_5">
+
+    <LinearLayout
+        style="@style/matchStyle"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_250"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/image" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/matchStyle"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="@string/title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/matchStyle"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="@string/description"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWeight"
+            style="@style/matchStyle"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="@string/weight"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <RelativeLayout style="@style/wrapStyle">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/wrapStyle"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/price"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                style="@style/wrapStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:backgroundTint="@color/red"
+                android:padding="@dimen/dp_10"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/matchStyle"
+            android:background="@color/grey"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivVideoIcon"
+                style="@style/wrapStyle"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_play_circle"
+                android:text="@string/price" />
+
+            <TextView
+                android:id="@+id/tvPlayVideo"
+                style="@style/wrapStyle"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_toEndOf="@id/ivVideoIcon"
+                android:text="@string/click_to_see_video"
+                android:textColor="@color/red" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/matchStyle"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivBikeIcon"
+                style="@style/wrapStyle"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_bike"
+                android:text="@string/price" />
+
+            <TextView
+                android:id="@+id/tvDeliveryTime"
+                style="@style/wrapStyle"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_toEndOf="@id/ivBikeIcon"
+                android:text="@string/delivery_time"
+                android:textColor="@color/dark_grey" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
