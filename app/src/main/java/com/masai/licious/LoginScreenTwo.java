@@ -1,5 +1,6 @@
 package com.masai.licious;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -66,7 +67,8 @@ public class LoginScreenTwo extends AppCompatActivity {
         mBtnConfirmOtpTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    //redirect to location screen
+                Intent intent = new Intent(LoginScreenTwo.this,LocationScreen.class);
+                startActivity(intent);
             }
         });
         mTvTermsTwo.setOnClickListener(new View.OnClickListener() {
