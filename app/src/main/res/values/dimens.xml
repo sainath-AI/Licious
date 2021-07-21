@@ -65,7 +65,6 @@
     <dimen name="dp_150">150dp</dimen>
     <dimen name="dp_200">200dp</dimen>
     <dimen name="dp_250">300dp</dimen>
-    <dimen name="dp_300">300dp</dimen>
 
     <dimen name="sp_5">5sp</dimen>
     <dimen name="sp_6">6sp</dimen>
