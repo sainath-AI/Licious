@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/loginParent"
+    tools:context=".LoginScreenTwo">
+
+    <TextView
+        android:id="@+id/tvSkipTwo"
+        style="@style/loginSkip"/>
+
+    <RelativeLayout
+        style="@style/loginParentTwo">
+
+        <TextView
+            android:id="@+id/tvSigninSignupTwo"
+            style="@style/signinTextView"/>
+
+        <TextView
+            android:id="@+id/tvMandatoryTwo"
+            style="@style/mandatoryTextView"
+            android:layout_below="@id/tvSigninSignupTwo" />
+
+        <TextView
+            android:id="@+id/tvOtpSentTwo"
+            style="@style/matchStyle"
+            android:layout_below="@id/tvMandatoryTwo"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/rectangle_otp_sent"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8"
+            android:text="@string/otp_sent"
+            android:textAlignment="center"
+            android:textColor="@color/green" />
+
+        <RelativeLayout
+            style="@style/loginParentThree"
+            android:layout_below="@id/tvOtpSentTwo">
+
+            <TextView
+                android:id="@+id/tvMobileNumberTwo"
+                style="@style/matchStyle"
+                android:textSize="@dimen/sp_12"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/mobile_number"
+                android:textColor="@color/dark_grey"/>
+
+            <EditText
+                android:id="@+id/etMobileNumberTwo"
+                style="@style/matchStyle"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                android:layout_below="@id/tvMobileNumberTwo"
+                android:inputType="number"
+                android:autofillHints="phone"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/tvEditNumberTwo"
+                style="@style/wrapStyle"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/edit_number"
+                android:textColor="@color/red"/>
+
+            <EditText
+                android:id="@+id/etOtpTwo"
+                style="@style/matchStyle"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                android:layout_below="@id/etMobileNumberTwo"
+                android:hint="@string/enter_otp"
+                android:inputType="number"
+                android:autofillHints="number" />
+
+            <TextView
+                android:id="@+id/tvResendTwo"
+                style="@style/wrapStyle"
+                android:textStyle="bold"
+                android:layout_below="@id/tvEditNumberTwo"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/resend"
+                android:textColor="@color/red"/>
+
+            <Button
+                android:id="@+id/btnConfirmOtpTwo"
+                style="@style/matchStyle"
+                android:background="@drawable/rectangle_button"
+                android:layout_below="@id/etOtpTwo"
+                android:text="@string/confirm"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvSigninAgreementTwo"
+                style="@style/wrapStyle"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_below="@id/btnConfirmOtpTwo"
+                android:text="@string/signin_agreement"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10" />
+
+            <TextView
+                android:id="@+id/tvTermsTwo"
+                style="@style/wrapStyle"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:textSize="@dimen/sp_10"
+                android:layout_below="@id/btnConfirmOtpTwo"
+                android:layout_marginStart="@dimen/dp_2"
+                android:layout_toEndOf="@+id/tvSigninAgreementTwo"
+                android:text="@string/terms"
+                android:textColor="@color/red"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
