@@ -1,12 +1,7 @@
 <resources>
     <string name="app_name">Licious</string>
-<<<<<<< HEAD
-=======
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
->>>>>>> a59b878435e6d107678581e3ccae496841e71722
     <string name="mobile_number">Mobile Number</string>
     <string name="skip">Skip</string>
     <string name="sign_in_sign_up">Sign In/Sign Up</string>
@@ -31,10 +26,6 @@
     <string name="navigation_drawrer_open">open navigation drawer</string>
     <string name="navigation_drawrer_close">close navigation drawer</string>
     <string name="best_sellers">Best Sellers</string>
-<<<<<<< HEAD
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
 
->>>>>>> a59b878435e6d107678581e3ccae496841e71722
+
 </resources>
