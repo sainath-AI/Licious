@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Licious">
 
-        <activity android:name=".NotificationsOffers"></activity>
+        <activity android:name=".NotificationsOffers"/>
         <activity android:name=".LocationScreen2" />
         <activity android:name=".LocationScreen" />
         
@@ -26,9 +26,6 @@
           
         <activity android:name=".LoginScreenOne"/>                    
           <activity android:name=".SplashScreen">
-          
-          
-                              
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
