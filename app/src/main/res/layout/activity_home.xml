@@ -99,120 +99,124 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_18"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/birthday"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
-                 android:layout_gravity="center_vertical"
-                android:src="@drawable/birthday"
-                />
-            <ImageView
-                android:id="@+id/bakrid"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/bakrid"
-                android:layout_toEndOf="@id/birthday"
-                />
+
             <ImageView
                 android:id="@+id/fish"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/fish"
-                android:layout_toEndOf="@id/bakrid"
+                android:src="@drawable/fish_and_seafood"
 
                 />
             <ImageView
                 android:id="@+id/chicken"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/chicken"
                 android:layout_toEndOf="@id/fish"
+                android:layout_marginStart="25dp"
 
                 />
             <ImageView
                 android:id="@+id/mutton"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/mutton"
+                android:src="@drawable/mutton_mania"
                 android:layout_toEndOf="@id/chicken"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/readytocook"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/redytocook"
+                android:src="@drawable/readytocook"
                 android:layout_toEndOf="@id/mutton"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/spreads"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/spreads"
                 android:layout_toEndOf="@id/readytocook"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/eggs"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/eggs"
                 android:layout_toEndOf="@id/spreads"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/kabab"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/kabab"
                 android:layout_toEndOf="@id/eggs"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/prawn"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/prawn"
                 android:layout_toEndOf="@id/kabab"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/coldcuts"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/cold"
+                android:src="@drawable/coldcuts"
                 android:layout_toEndOf="@id/prawn"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/combos"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/combos"
                 android:layout_toEndOf="@id/coldcuts"
+                android:layout_marginStart="25dp"
+
 
                 />
             <ImageView
                 android:id="@+id/saver"
-                android:layout_width="@dimen/dp_80"
-                android:layout_height="@dimen/dp_70"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/saver"
+                android:src="@drawable/supersaver"
                 android:layout_toEndOf="@id/combos"
+                android:layout_marginStart="25dp"
+
 
                 />
         </RelativeLayout>
@@ -276,6 +280,7 @@
                 android:layout_below="@id/metopiaJoin">
 
             <ImageView
+                android:id="@+id/referNow"
                 android:layout_width="@dimen/dp_180"
                 android:layout_height="@dimen/dp_100"
                 android:src="@drawable/referfriend"
@@ -301,6 +306,7 @@
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
+                    android:id="@+id/bestSeller"
                     android:layout_height="wrap_content"
                     >
 

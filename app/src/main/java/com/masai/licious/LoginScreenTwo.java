@@ -36,7 +36,7 @@ public class LoginScreenTwo extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mEtOtpTwo.setText("1234");
+                mEtOtpTwo.setText("4 3 7 6 3 9");
                 mBtnConfirmOtpTwo.setBackgroundColor(R.drawable.rectangle_button);
             }
         },2000);
