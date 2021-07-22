@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Licious" parent="Theme.Design.Light.NoActionBar">
 
+>>>>>>> a59b878435e6d107678581e3ccae496841e71722
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

@@ -98,7 +98,7 @@ public class ReadyToCook extends AppCompatActivity {
 
         CategoryModel rtcChickenPlatter = new CategoryModel(R.drawable.rtc_chickenplatter,
                 "Chicken Party Platter | Ready to Cook",
-                ""
+                "",
                 "Pieces 12-16 | Net wt. 200gms",
                 "MRP: ₹332", "How To Cook",
                 "Today 7 AM - 10 AM");
