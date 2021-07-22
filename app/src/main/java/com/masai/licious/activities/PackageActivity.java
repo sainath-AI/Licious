@@ -73,12 +73,8 @@ public class PackageActivity extends AppCompatActivity {
 
             }
         });
-        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                tabLayout.selectTab(tabLayout.getTabAt(position));
-            }
-        });
+
+
 
 
 
