@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.masai.licious.R;
 
 public class LoginScreenTwo extends AppCompatActivity {
 
@@ -39,7 +41,7 @@ public class LoginScreenTwo extends AppCompatActivity {
                 mEtOtpTwo.setText("4 3 7 6 3 9");
                 mBtnConfirmOtpTwo.setBackgroundColor(R.drawable.rectangle_button);
             }
-        },2000);
+        },2500);
         mTvSkipTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,15 +61,15 @@ public class LoginScreenTwo extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mEtOtpTwo.setText("5678");
+                        mEtOtpTwo.setText("5 4 8 2 7 3");
                     }
-                },2000);
+                },2500);
             }
         });
         mBtnConfirmOtpTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreenTwo.this,LocationScreen.class);
+                Intent intent = new Intent(LoginScreenTwo.this, LocationScreenOne.class);
                 startActivity(intent);
             }
         });

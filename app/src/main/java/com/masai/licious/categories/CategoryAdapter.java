@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.categories;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.masai.licious.R;
 
 import java.util.ArrayList;
 

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/loginParent"
-    tools:context=".LoginScreenTwo">
+    tools:context=".activities.LoginScreenTwo">
 
     <TextView
         android:id="@+id/tvSkipTwo"

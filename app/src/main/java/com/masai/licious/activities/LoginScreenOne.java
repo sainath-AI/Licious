@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.masai.licious.R;
 
 public class LoginScreenOne extends AppCompatActivity {
 
@@ -39,7 +41,7 @@ public class LoginScreenOne extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View v) {
-                mBtnOtpOne.setBackgroundColor(R.color.red);
+                mBtnOtpOne.setBackgroundColor(R.color.violet);
             }
         });
         mBtnOtpOne.setOnClickListener(new View.OnClickListener() {
