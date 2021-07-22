@@ -98,11 +98,19 @@ public class ReadyToCook extends AppCompatActivity {
 
         CategoryModel rtcChickenPlatter = new CategoryModel(R.drawable.rtc_chickenplatter,
                 "Chicken Party Platter | Ready to Cook",
-                "",
-                "Pieces 12-16 | Net wt. 200gms",
-                "MRP: ₹332", "How To Cook",
+                "Celebrations done right with a mix of Spicy & Creamy in our best-loved Chicken Marinades! Start with the heat of Habanero Chicken Wings (10 pcs), take the middle path with Chicken Tikka Boneless (7-8 pcs), and close with Creamy Afghani Chicken (7-8 pcs). There's something for every Chicken-loving palate!",
+                "Pieces 24-28 | Net wt. 900gms",
+                "MRP: ₹427", "How To Cook",
                 "Today 7 AM - 10 AM");
         categoryModelList.add(rtcChickenPlatter);
+
+        CategoryModel rtcRoastChicken = new CategoryModel(R.drawable.rtc_roastchicken,
+                "Sunday Roast Chicken - Whole | Ready to Cook",
+                "Delight your taste buds with some amazing Sunday Roast Chicken. Show off your culinary magic (minus the hassle) with our fresh, pre-marinated and easy to cook chicken. The aromatic spice mix in the oil brings out all the natural flavours of the meat and keeps it juicy. Enjoy the feast!",
+                "Pieces 1 | Net wt. 1200gms",
+                "MRP: ₹499", "How To Cook",
+                "Today 7 AM - 10 AM");
+        categoryModelList.add(rtcRoastChicken);
 
     }
 

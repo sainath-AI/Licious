@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
+        android:padding="@dimen/dp_5"
         android:elevation="@dimen/dp_30">
 
         <RelativeLayout
@@ -62,8 +63,8 @@
             <ImageView
                 android:layout_centerVertical="true"
                 android:id="@+id/search"
-                android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
                 android:layout_marginStart="120dp"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_toEndOf="@+id/city"
@@ -72,20 +73,19 @@
             <ImageView
                 android:id="@+id/bell"
                 android:layout_centerVertical="true"
-                android:layout_width="@dimen/dp_25"
-                android:layout_height="@dimen/dp_25"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
                 android:layout_marginStart="@dimen/dp_12"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_toEndOf="@id/search"
-                android:src="@drawable/ringing" />
+                android:src="@drawable/ic_bell" />
 
             <ImageView
                 android:layout_centerVertical="true"
                 android:id="@+id/cart"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
                 android:layout_marginStart="@dimen/dp_5"
-                android:layout_marginTop="@dimen/dp_7"
                 android:layout_toEndOf="@+id/bell"
                 android:src="@drawable/ic_cart" />
 
