@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.categories;
 
 public class CategoryModel {
     private final int image;

@@ -11,4 +11,9 @@
     <color name="dark_grey">#C9C9C9</color>
     <color name="green">#008000</color>
     <color name="grey">#FAFAFA</color>
+    <color name="black_title">#111111</color>
+    <color name="black_01">#1B1A1A</color>
+    <color name="grey_shade_01">#9E9A9A</color>
+    <color name="black_02">#292727</color>
+    <color name="black_03">#2C2929</color>
 </resources>
