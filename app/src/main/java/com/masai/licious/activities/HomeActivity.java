@@ -1,13 +1,12 @@
 package com.masai.licious.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -92,24 +91,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIvReferFriend.setOnClickListener(this);
         mRelativelayout.setOnClickListener(this);
 
-
     }
-
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.search:
-            //    Intent intent1=new Intent(HomeActivity.this,---------);
-             //   startActivity(intent1);
+                //    Intent intent1=new Intent(HomeActivity.this,---------);
+                //   startActivity(intent1);
                 break;
-            case  R.id.bell:
-            //    Intent intent2=new Intent(HomeActivity.this,-------);
-              //  startActivity(intent2);
+            case R.id.bell:
+                //    Intent intent2=new Intent(HomeActivity.this,-------);
+                //  startActivity(intent2);
                 break;
-            case  R.id.cart:
-             //   Intent intent3=new Intent(HomeActivity.this,-------);
-             //   startActivity(intent3);
+            case R.id.cart:
+                //   Intent intent3=new Intent(HomeActivity.this,-------);
+                //   startActivity(intent3);
                 break;
             case R.id.fish:
                 goToPackageActivity(0);
@@ -143,35 +140,27 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 goToPackageActivity(9);
                 break;
             case R.id.metopiaJoin:
-             //  Intent intent4=new Intent(HomeActivity.this,-----);
-             //   startActivity(intent4);
+                //  Intent intent4=new Intent(HomeActivity.this,-----);
+                //   startActivity(intent4);
                 break;
             case R.id.licious1:
-              //  Intent intent5 =new Intent(HomeActivity.this,-----);
+                //  Intent intent5 =new Intent(HomeActivity.this,-----);
                 //startActivity(intent5);
                 break;
             case R.id.referNow:
-               // Intent intent6=new Intent(HomeActivity.this,-----);
+                // Intent intent6=new Intent(HomeActivity.this,-----);
                 //startActivity(intent6);
                 break;
             case R.id.bestSeller:
                 goToPackageActivity(10);
                 break;
 
-
-
-
         }
-
-
     }
 
     private void goToPackageActivity(int position) {
-        Intent intent=new Intent(HomeActivity.this,PackageActivity.class);
-        intent.putExtra("position",position);
+        Intent intent = new Intent(this, PackageActivity.class);
+        intent.putExtra("position", position);
         startActivity(intent);
-
     }
-
-
-    }
+}

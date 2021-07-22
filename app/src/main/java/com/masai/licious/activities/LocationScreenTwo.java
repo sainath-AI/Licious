@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.masai.licious.activities.HomeActivity;
+import com.masai.licious.R;
 
-public class LocationScreen2 extends AppCompatActivity {
+public class LocationScreenTwo extends AppCompatActivity {
 
     ImageButton imageButton;
 
@@ -21,7 +21,7 @@ public class LocationScreen2 extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LocationScreen2.this, HomeActivity.class);
+                Intent intent=new Intent(LocationScreenTwo.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

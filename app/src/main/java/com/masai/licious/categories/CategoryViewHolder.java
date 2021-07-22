@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.categories;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.masai.licious.R;
 
 public class CategoryViewHolder extends RecyclerView.ViewHolder {
 
