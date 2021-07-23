@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__7864404941556280995" />
+        app:srcCompat="@drawable/whitebacksvg" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -105,12 +105,12 @@
         android:id="@+id/imageButton"
         android:layout_width="30dp"
         android:layout_height="29dp"
-        android:background="aaaaaa"
+        android:background="#aaaaaa"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="@+id/view7"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/view7"
-        app:srcCompat="@drawable/ic__4095787331600002636" />
+        app:srcCompat="@drawable/copysvg" />
 
     <TextView
         android:id="@+id/textView11"
@@ -213,7 +213,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintStart_toStartOf="@+id/view8"
         app:layout_constraintTop_toTopOf="@+id/view8"
-        app:srcCompat="@drawable/ic__816081241599780996" />
+        app:srcCompat="@drawable/searchbarsvg" />
 
     <ImageButton
         android:id="@+id/imageButton5"
@@ -224,6 +224,6 @@
         app:layout_constraintEnd_toStartOf="@+id/textView14"
         app:layout_constraintStart_toStartOf="@+id/view9"
         app:layout_constraintTop_toTopOf="@+id/view9"
-        app:srcCompat="@drawable/ic__718826571579605524" />
+        app:srcCompat="@drawable/sharesvg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

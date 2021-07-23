@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".LocationScreen">
+    tools:context=".activities.LocationScreenOne">
 
     <View
         android:id="@+id/view"
@@ -20,7 +20,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose your delivery location"
+        android:text="@string/choose_delivery_location"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__7864404941556280995" />
+        app:srcCompat="@drawable/whitebacksvg" />
 
     <TextView
         android:id="@+id/textView2"
@@ -46,9 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:gravity="center"
-        android:text="Order the Freshest Chicken Mutton,Seafood &amp; Eggs"
+        android:text="@string/order_freshest_meat"
         android:textColor="@color/black"
-        android:textSize="26sp"
+        android:textSize="@dimen/sp_20"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -75,15 +75,15 @@
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic__028692271535694869" />
+        app:srcCompat="@drawable/searchbarsvg" />
 
     <TextView
         android:id="@+id/tvDelivery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Search for your Delivery  location"
-        android:textSize="22sp"
+        android:text="@string/search_delivery_location"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
@@ -92,9 +92,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Or"
+        android:text="@string/or"
         android:textColor="@color/black"
-        android:textSize="27sp"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,9 +115,9 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Use my location"
+        android:text="@string/use_my_location"
         android:textColor="#ff0000"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3"
         app:layout_constraintHorizontal_bias="0.747"
@@ -135,6 +135,6 @@
         app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:srcCompat="@drawable/ic__0315406981540882595" />
+        app:srcCompat="@drawable/locationredsvg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

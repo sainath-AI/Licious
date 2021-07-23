@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__7864404941556280995" />
+        app:srcCompat="@drawable/whitebacksvg" />
 
 
     <ScrollView
