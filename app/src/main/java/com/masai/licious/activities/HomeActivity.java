@@ -1,6 +1,5 @@
 package com.masai.licious.activities;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,13 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
-import com.masai.licious.CartActivity;
 import com.masai.licious.LiciousMeatopia;
 import com.masai.licious.LiciousWay;
 import com.masai.licious.NotificationActivity;
 import com.masai.licious.R;
 import com.masai.licious.ReferEarnActivity;
-import com.masai.licious.SearchActivity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
     tools:context=".NotificationActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <View
+      android:id="@+id/view"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="#2C2A2A"
+
+
+      />
+
+  <ImageButton
+      android:id="@+id/igBack"
+      android:layout_width="49dp"
+      android:layout_height="40dp"
+      android:layout_marginTop="8dp"
+      android:background="#2C2A2A"
+      app:srcCompat="@drawable/whitebacksvg" />
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/notifications"
+      android:gravity="center"
+      android:layout_marginStart="@dimen/dp_90"
+      android:layout_marginTop="@dimen/dp_12"
+      android:layout_toEndOf="@id/igBack"
+      android:textColor="@color/white"
+      android:textSize="18sp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="CLEAR"
+      android:layout_marginStart="@dimen/dp_85"
+      android:layout_toEndOf="@id/textView"
+      android:textColor="#555555"
+      android:textSize="16sp"
+      />
+  <com.google.android.material.tabs.TabLayout
+      android:id="@+id/tabLayout"
+      android:layout_below="@id/view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:tabSelectedTextColor="#ff2e2e"
+      app:tabGravity="center"
+      app:tabIndicatorColor="#ff0000"
+      android:focusableInTouchMode="true"
+      app:tabMode="scrollable"
+      app:tabTextColor="@color/black" />
+
+  <androidx.viewpager2.widget.ViewPager2
+      android:id="@+id/viewPager"
+      android:layout_below="@id/tabLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+
+
+
+</RelativeLayout>
