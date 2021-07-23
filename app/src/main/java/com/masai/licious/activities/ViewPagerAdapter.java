@@ -1,15 +1,13 @@
 package com.masai.licious.activities;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.masai.licious.fragments.ChickenFragment;
-import com.masai.licious.fragments.ColdcutsFragment;
+import com.masai.licious.fragments.ColdCutsFragment;
 import com.masai.licious.fragments.EggsFragment;
 import com.masai.licious.fragments.FishFragment;
 import com.masai.licious.fragments.KababFragment;
@@ -32,23 +30,23 @@ public class ViewPagerAdapter extends FragmentStateAdapter  {
             case 0:
                 return FishFragment.newInstance();
             case 1:
-                return MuttonFragment.newInstance();
-            case 2:
                 return ChickenFragment.newInstance();
+            case 2:
+                return MuttonFragment.newInstance();
             case 3:
-                return EggsFragment.newInstance();
+                return ColdCutsFragment.newInstance();
             case 4:
-                return ColdcutsFragment.newInstance();
+                return EggsFragment.newInstance();
             case 5:
                 return PrawnFragment.newInstance();
             case 6:
-                return ReadyToCookFragment.newInstance();
-            case 7:
-                return SpreadsFragment.newInstance();
-            case 8:
-                return SaverFragment.newInstance();
-            case 9:
                 return KababFragment.newInstance();
+            case 7:
+                return SaverFragment.newInstance();
+            case 8:
+                return ReadyToCookFragment.newInstance();
+            case 9:
+                return SpreadsFragment.newInstance();
         }
         return null;
 
