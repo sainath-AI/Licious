@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.masai.licious.Adapters.FishAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
@@ -24,17 +23,10 @@ public class FishFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
 
-
-
-
-    public FishFragment(){
-
-    }
     public  static  FishFragment newInstance(){
         FishFragment fishFragment=new FishFragment();
         return fishFragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,98 +42,95 @@ public class FishFragment extends Fragment {
         buildRecyclerViewData();
         setRecyclerdata();
     }
+
     private void setRecyclerdata() {
         FishAdapter fishAdapter=new FishAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(fishAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-
     }
 
     private void buildRecyclerViewData() {
-        ModelClass tangdi = new ModelClass(R.drawable.chicken_tangdi,
-                "Chicken Tangdi - Biryani Cut",
-                "Succulent and tender pieces of chicken that have been taken from the leg of the chicken, cut into drumsticks and whole thigh pieces. A mixture of white and dark meat these pieces of chicken are loaded with flavour and deliver mouth-watering goodness with every bite. Juicy and tender they are perfect for every kind of biryani, from Hyderabadi to Calicut biryani.\n" +
-                        "Order Chicken Tangdi - Biryani Cut online on Licious and get it delivered to your home.",
-                "Gross Wt. 600gms | Net wt. 550gms",
-                "MRP: ₹229", "Get value for money!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(tangdi);
 
-        ModelClass country = new ModelClass(R.drawable.chicken_country,
-                "Smoky Turmeric Country Chicken - Curry Cut With Skin",
-                "Smoky Turmeric Country Chicken is a traditional preparation of country chicken (Nati Koli) smoked & marinated in turmeric. This cut of chicken comes from the Aseel Cross Breed birds & offers a slightly tougher texture which is characteristic of authentic country chicken birds.\n" +
-                        "Known for its anti-bacterial & anti-inflammatory properties, turmeric is often used in a variety of marinades. Licious Smoky Turmeric Country Chicken allows for easy preparation of delicious curries and fries, with its perfectly cut pieces ideal for quick & easy cooking!",
-                "Gross Wt. 510gms | Net wt. 500gms",
-                "MRP: ₹349", "Only the Safest Chicken!",
+        ModelClass bombil = new ModelClass(R.drawable.fish_bombil,
+                "Bombay Duck (Bombil) - Whole, Cleaned",
+                "Perfect for frying, this soft fleshy fish is loved by all. Thoroughly cleaned and gutted so you can enjoy it every step of the way from cooking to devouring it up!",
+                "Gross Wt. 415gms | Net wt. 250gms",
+                "MRP: ₹139", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(country);
+        modelClasses.add(bombil);
 
-        ModelClass large = new ModelClass(R.drawable.chicken_large,
-                "Chicken Curry Cut Large - Large Pack",
-                "A mix of dark and white meat, our large Chicken Curry Cut pieces include Two leg, Two wing without tip, and Two breast quarter with backbone. Obtained from pasture-raised healthy chickens, the meat has a rich, juicy flavour with a tender, smooth and moderate-firm texture. Best suited for curries, the package includes both boneless and bone-in curry cut pieces. Order hormone-free Chicken Curry Cut pieces online and get them delivered fresh at your doorstep.",
-                "Gross Wt. 1026gms | Net wt. 1000gms",
-                "MRP: ₹285", "Get value for money!",
+        ModelClass vanjaram = new ModelClass(R.drawable.fish_vanjaram,
+                "Seer (Vanjaram/Surmai) Small - Steaks",
+                "The reigning universal favourite! Cut into firm, delectable steaks, the unmistakable sharp flavour is bound to gratify and satisfy a great deal. Beautifully carved and handled carefully, bite into the welcoming taste of pure and rich, just off the water seer. It isn't considered one of the popular fishes for nothing.",
+                "Gross Wt. 704gms | Net wt. 500gms",
+                "MRP: ₹899", "See why your meat is safe",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(large);
+        modelClasses.add(vanjaram);
 
-        ModelClass mince = new ModelClass(R.drawable.chicken_mince,
-                "Chicken Mince - Large Pack",
-                "Chicken Mince consists of Chicken Breast Fillets ground to perfection! Packed with proteins and minerals, Chicken Mince is a versatile meat that can be ideal for making patties, kebabs, keema, or meatballs. Order tender, fine-grained Chicken Mince online from Licious and get it delivered to your door.\n" +
-                        "\n" +
-                        "Note: Licious Chicken is thoroughly cleaned before it is minced. You can cook it straight from the pack. To retain the taste, texture and flavour of the mince, please do not wash it.",
-                "Gross Wt. 1130gms | Net wt. 900gms",
-                "MRP: ₹479", "Only the Safest Chicken!",
+        ModelClass kendai = new ModelClass(R.drawable.fish_kendai,
+                "Pink Perch (Kendai/Madumagala) Medium - Whole, Cleaned",
+                "Offered whole, our Seawater Pink Perch is cleaned and gutted neatly. Also known as Rani Masa or Kendai, Pink Perch gets its name due to the pink hue and yellow strips with scales on its skin. It has a mild flavour with a delicate, soft texture that makes it ideal for curries, fried or grilled preparations. High in proteins and vitamins, this fatty fish with minimum bones is also ideal if you are new to seafood. Buy Pink Perch online from Licious and get a doorstep delivery.",
+                "Gross Wt. 694gm | Net wt. 500gm",
+                "MRP: ₹359", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(mince);
+        modelClasses.add(kendai);
 
-        ModelClass breast = new ModelClass(R.drawable.chicken_breast,
-                "Chicken Breast Fillet - Thinly Sliced",
-                "Chicken Breast is one of the meatier cuts of a chicken, which comes from the breast-bone of the bird. This fillet cut is skinless and thinly sliced for more even cooking. A good source of vitamins and minerals, Chicken Breast, is also a great choice for a lean protein diet. Apply a flavourful spice-rub and pan-fry, bake or the Chicken Breast Fillet to relish this versatile cut.",
-                "Gross Wt. 1303gms | Net wt. 450gms",
-                "MRP: ₹259", "Find cuts for every recipe",
+        ModelClass theppu = new ModelClass(R.drawable.fish_theppu,
+                "Catla (Theppu) Medium - Bengali Cut, No Head",
+                "A delight for Bengali cuisine aficionados, this lean, bony fish, cut Bengali style is bound to elevate your fish curries with its soft and delicate flavoured meat. Includes part of the tail for added flavour as the juices infuse into your curries to give it a rich body and sharp flavour.",
+                "Gross Wt. 961gms | Net wt. 500gms",
+                "MRP: ₹315", "See why your meat is safe",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(breast);
+        modelClasses.add(theppu);
 
-        ModelClass lollipop = new ModelClass(R.drawable.chicken_lollipop,
-                "Chicken Lollipop",
-                "Chicken Lollipops at Licious are expertly cleaned, cut and trimmed. The meat is cut loose from the wing bone and pushed down towards the end of the drumstick. Chicken Lollipops are rich in flavour and tender in texture. They are ideal for a protein-rich meal. Chicken Lollipops can be pan-fried or deep-fried to make perfect starters. The meat turns juicy and succulent after cooking. Order Chicken Lollipops from Licious and prepare crispy fried lollipops at home.",
-                "Gross Wt. 10 | Net wt. 10",
-                "MRP: ₹129", "Get value for money!",
+        ModelClass kajoli = new ModelClass(R.drawable.fish_kajoli,
+                "Kajoli - Whole & Cleaned, No Tail",
+                "At Licious, the freshwater fish Kajoli is thoroughly cleaned, gutted and offered whole without the tail. Also known as Kajuli, Kajli or Baspata, this lean fish is a rich source of proteins and minerals like magnesium and calcium. Kajoli has a sweet taste as compared to other fishes and has a delicate texture that is ideal for dry preparations like grilled fish. Buy Kajoli online and get your order delivered to your doorstep.",
+                "Gross Wt. 280gms | Net wt. 250gms",
+                "MRP: ₹338", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(lollipop);
+        modelClasses.add(kajoli);
 
-        ModelClass gizzard = new ModelClass(R.drawable.chicken_gizzard,
-                "Chicken Gizzard",
-                "Chicken Gizzards from Licious are freshly cut and thoroughly cleaned. Obtained from the muscular areas around the digestive tract of the bird, the Gizzards have a unique and strong flavour and are firm in texture. They are also a rich source of proteins and vitamins. Chicken Gizzards have a low fat content and can be braised or used in starters when fried. Order Chicken Gizzards online from Licious to enjoy home-made fried gizzards or chicken gizzard masala.",
-                "Gross Wt. 303gms | Net wt. 300gms",
-                "MRP: ₹55", "Find cuts for every recipe",
+        ModelClass rui = new ModelClass(R.drawable.fish_rui,
+                "Rohu (Rui) - Head",
+                "One medium rohu fish-head cleaned, cleaved in two and prepped for your next culinary adventure. Meaty with the palpable bony, freshwater sweetness, this one’s strictly crafted for those with a hyper-active freshwater-fish love. So, if you are looking for the perfect Bengali Moori Ghonto or the Anglo-Indian fish-head curry, we have got just the thing for you.",
+                "Gross Wt. 1 | Net wt. 1",
+                "MRP: ₹49", "See why your meat is safe",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(gizzard);
+        modelClasses.add(rui);
 
-        ModelClass drumstick = new ModelClass(R.drawable.chicken_drumstick,
-                "Chicken Drumstick",
-                "Our skinless and bone-in Chicken Drumsticks are cut from the lower leg portions. These juicy portions are flavourful and tender while being one of the fleshiest cuts of the bird. They contain a little more fat as compared to chicken wings. In terms of nutrients, these succulent portions are high in proteins and vitamins. Thoroughly cleaned and cut, these drumsticks are ideal for grilled or fried dishes. Order online from Licious and get fresh Chicken Drumsticks home delivered.",
-                "Gross Wt. 666gms | Net wt. 500gms",
-                "MRP: ₹235", "Only the Safest Chicken!",
+        ModelClass erimeenu = new ModelClass(R.drawable.fish_erimeenu,
+                "Emperor (Erimeenu) Small - Curry Cut, No Head",
+                "Emperor is found in the deep lagoons and coral reefs. A healthy choice for many, as it is low in calories and fat. Once cooked, this white fish gets firm, almost chewy and doesn't flake. It has a mild but very distinctive flavour. This fish is great for baking, steaming, deep frying, grilling & barbecuing.",
+                "Gross Wt. 980gms | Net wt. 500gms",
+                "MRP: ₹565", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(drumstick);
+        modelClasses.add(erimeenu);
 
-        ModelClass liver = new ModelClass(R.drawable.chicken_liver,
-                "Chicken Liver",
-                "At Licious, the Chicken Liver is fresh and thoroughly cleaned and cut into pieces. The chicken liver has a strong flavour and a smooth texture when raw which turns to being dense when cooked. Obtained from farm-raised, healthy chickens, the chicken liver is a rich source of vitamins, protein, and iron. Ideal for pan-fried or stir-fried dishes, you can prepare delicious Chicken Liver Masala with a blend of spices and herbs. Buy Chicken Liver online and get it delivered to your doorstep.",
-                "Gross Wt. 354gms | Net wt. 350gms",
-                "MRP: ₹65", "Find cuts for every recipe",
+        ModelClass kane = new ModelClass(R.drawable.fish_kane,
+                "Lady Fish (Kane/Poovan) Medium - Curry Cut",
+                "This seawater fish is sure to appeal to your palate with its delicate taste. While the Lady Fish is known to be bonier that most, this is easily remedied by pressure cooking the fish enough. Offered to you in a curry cut without head, get the most out of this subtle-flavoured fish, best had fried or steamed.",
+                "Gross Wt. 394gms | Net wt. 250gms",
+                "MRP: ₹259", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(liver);
+        modelClasses.add(kane);
 
-        ModelClass thigh = new ModelClass(R.drawable.chicken_thigh,
-                "Chunkier Chicken Thigh with Bone",
-                "Bone-in pieces of chicken thigh which have a moderate firm texture that turn juicy when cooked. Rich in proteins and minerals, this extra-meaty cut is ideal for slow-cooked preparations.",
-                "Gross Wt. 667gms | Net wt. 500gms",
-                "MRP: ₹239", "Only the Safest Chicken!",
+        ModelClass pulasa = new ModelClass(R.drawable.fish_pulasa,
+                "Hilsa(Pulasa/Palva/Palla) Medium - Curry Cut With Head",
+                "Found in the fresh waters of eastern India, the Hilsa has a full-bodied flavour and a tender, oily texture. Also known as Ilish, Pulasa, Palva, or Palla, Hilsa is rich in omega-3 fatty acids, proteins, and calcium. This Hilsa is cut perfectly into medium-sized pieces for easy, curry preparations.",
+                "Gross Wt. 704gms | Net wt. 500gms",
+                "MRP: ₹1799", "Coast to kitchen in 24 hrs",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(thigh);
+        modelClasses.add(pulasa);
+
+        ModelClass murrel = new ModelClass(R.drawable.fish_murrel,
+                "River Sol (Murrel/Nangu) - Fillet",
+                "Mild tasting boneless fillets of freshwater Sol, cut precisely for the perfect grill or pan-fry. Rich in Omega-3 fatty acids, essential minerals like potassium and phosphorus, and vitamins like Niacin, this is the perfect pick for the health-conscious gourmand.",
+                "Gross Wt. 568gms | Net wt. 250gms",
+                "MRP: ₹519", "See why your meat is safe",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(murrel);
 
     }
 

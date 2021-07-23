@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.MuttonAdapter;
 import com.masai.licious.R;
@@ -24,14 +23,10 @@ public class MuttonFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
 
-    public MuttonFragment(){
-
-    }
     public  static  MuttonFragment newInstance(){
         MuttonFragment muttonFragment=new MuttonFragment();
         return muttonFragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,93 +47,90 @@ public class MuttonFragment extends Fragment {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(muttonAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
-
     }
 
     private void buildRecyclerViewData() {
-        ModelClass tangdi = new ModelClass(R.drawable.chicken_tangdi,
-                "Chicken Tangdi - Biryani Cut",
-                "Succulent and tender pieces of chicken that have been taken from the leg of the chicken, cut into drumsticks and whole thigh pieces. A mixture of white and dark meat these pieces of chicken are loaded with flavour and deliver mouth-watering goodness with every bite. Juicy and tender they are perfect for every kind of biryani, from Hyderabadi to Calicut biryani.\n" +
-                        "Order Chicken Tangdi - Biryani Cut online on Licious and get it delivered to your home.",
-                "Gross Wt. 600gms | Net wt. 550gms",
-                "MRP: ₹229", "Get value for money!",
+        ModelClass shoulder = new ModelClass(R.drawable.mutton_shoulder,
+                "Lamb Curry Cut - Shoulder",
+                "Evenly cut from the top front leg, our medium-sized, bone-in Lamb Shoulder Curry Cuts are one of the juiciest meat portions. Obtained from healthy lambs raised in open pastures, they are rich in proteins, vitamin B12, zinc, and iron. High on flavour with a firm texture and a little more fat as compared to leaner cuts, they are ideal for slow-cooked curries. Order Lamb Shoulder Curry Cuts online and get them home delivered.",
+                "Gross Wt. 833gms | Net wt. 500gms",
+                "MRP: ₹599", "The Safest Mutton in Town",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(tangdi);
+        modelClasses.add(shoulder);
 
-        ModelClass country = new ModelClass(R.drawable.chicken_country,
-                "Smoky Turmeric Country Chicken - Curry Cut With Skin",
-                "Smoky Turmeric Country Chicken is a traditional preparation of country chicken (Nati Koli) smoked & marinated in turmeric. This cut of chicken comes from the Aseel Cross Breed birds & offers a slightly tougher texture which is characteristic of authentic country chicken birds.\n" +
-                        "Known for its anti-bacterial & anti-inflammatory properties, turmeric is often used in a variety of marinades. Licious Smoky Turmeric Country Chicken allows for easy preparation of delicious curries and fries, with its perfectly cut pieces ideal for quick & easy cooking!",
-                "Gross Wt. 510gms | Net wt. 500gms",
-                "MRP: ₹349", "Only the Safest Chicken!",
+        ModelClass curry = new ModelClass(R.drawable.mutton_curry,
+                "Lean Goat Curry Cut",
+                "Our Lean Goat Curry Cut contains succulent pieces of goat meat cut from the shoulders, ribs and leg which are fat trimmed .Relish bite-sized cuts of protein -rich goat meat that are low in fat as compared to other cuts and have a firm texture Lean cuts are going to result in a delicious gravy but much lighter, and low in fat content. Recommended that lean meat be cooked over high heat as it doesn’t take too long to cook evenly.",
+                "Gross Wt. 660gms | Net wt. 500gms",
+                "MRP: ₹525", "The Safest Mutton in Town",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(country);
+        modelClasses.add(curry);
 
-        ModelClass large = new ModelClass(R.drawable.chicken_large,
-                "Chicken Curry Cut Large - Large Pack",
-                "A mix of dark and white meat, our large Chicken Curry Cut pieces include Two leg, Two wing without tip, and Two breast quarter with backbone. Obtained from pasture-raised healthy chickens, the meat has a rich, juicy flavour with a tender, smooth and moderate-firm texture. Best suited for curries, the package includes both boneless and bone-in curry cut pieces. Order hormone-free Chicken Curry Cut pieces online and get them delivered fresh at your doorstep.",
-                "Gross Wt. 1026gms | Net wt. 1000gms",
-                "MRP: ₹285", "Get value for money!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(large);
-
-        ModelClass mince = new ModelClass(R.drawable.chicken_mince,
-                "Chicken Mince - Large Pack",
-                "Chicken Mince consists of Chicken Breast Fillets ground to perfection! Packed with proteins and minerals, Chicken Mince is a versatile meat that can be ideal for making patties, kebabs, keema, or meatballs. Order tender, fine-grained Chicken Mince online from Licious and get it delivered to your door.\n" +
+        ModelClass keema = new ModelClass(R.drawable.mutton_keema,
+                "Lamb Mince (Keema)",
+                "Lamb meat from the hind legs is ground to perfection to offer you the finest Lamb Mince from Licious. This versatile meat is rich in flavour and has a tender, fine-grained texture. Also popularly known as keema, lamb mince is rich in proteins, vitamins, and minerals and is a perfect blend of lamb meat & fat. Lamb mince can be an ideal choice to make meatballs, burgers, keema curry, and kebabs. Order Lamb Mince online from Licious and get it home-delivered.\n" +
                         "\n" +
-                        "Note: Licious Chicken is thoroughly cleaned before it is minced. You can cook it straight from the pack. To retain the taste, texture and flavour of the mince, please do not wash it.",
-                "Gross Wt. 1130gms | Net wt. 900gms",
-                "MRP: ₹479", "Only the Safest Chicken!",
+                        "Note: Licious Mutton is thoroughly cleaned before it is minced. You can cook it straight from the pack. To retain the taste, texture and flavour of the mince, please do not wash it.",
+                "Gross Wt. 625gms | Net wt. 500gms",
+                "MRP: ₹549", "The Safest Mutton in Town",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(mince);
+        modelClasses.add(keema);
 
-        ModelClass breast = new ModelClass(R.drawable.chicken_breast,
-                "Chicken Breast Fillet - Thinly Sliced",
-                "Chicken Breast is one of the meatier cuts of a chicken, which comes from the breast-bone of the bird. This fillet cut is skinless and thinly sliced for more even cooking. A good source of vitamins and minerals, Chicken Breast, is also a great choice for a lean protein diet. Apply a flavourful spice-rub and pan-fry, bake or the Chicken Breast Fillet to relish this versatile cut.",
-                "Gross Wt. 1303gms | Net wt. 450gms",
-                "MRP: ₹259", "Find cuts for every recipe",
+        ModelClass heart = new ModelClass(R.drawable.mutton_heart,
+                "Mutton Heart",
+                "Unlike other muscle meats, mutton hearts have a slightly dense and firm texture with a rich, dark meat flavour. Hearts are popularly enjoyed grilled or sautéed with a mix of fresh vegetables. Here, we offer fresh lamb & goat hearts, cleaned and cut for easy cooking.",
+                "Gross Wt. 250gms | Net wt. 250gms",
+                "MRP: ₹199", "The Licious Promise",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(breast);
+        modelClasses.add(heart);
 
-        ModelClass lollipop = new ModelClass(R.drawable.chicken_lollipop,
-                "Chicken Lollipop",
-                "Chicken Lollipops at Licious are expertly cleaned, cut and trimmed. The meat is cut loose from the wing bone and pushed down towards the end of the drumstick. Chicken Lollipops are rich in flavour and tender in texture. They are ideal for a protein-rich meal. Chicken Lollipops can be pan-fried or deep-fried to make perfect starters. The meat turns juicy and succulent after cooking. Order Chicken Lollipops from Licious and prepare crispy fried lollipops at home.",
-                "Gross Wt. 10 | Net wt. 10",
-                "MRP: ₹129", "Get value for money!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(lollipop);
-
-        ModelClass gizzard = new ModelClass(R.drawable.chicken_gizzard,
-                "Chicken Gizzard",
-                "Chicken Gizzards from Licious are freshly cut and thoroughly cleaned. Obtained from the muscular areas around the digestive tract of the bird, the Gizzards have a unique and strong flavour and are firm in texture. They are also a rich source of proteins and vitamins. Chicken Gizzards have a low fat content and can be braised or used in starters when fried. Order Chicken Gizzards online from Licious to enjoy home-made fried gizzards or chicken gizzard masala.",
-                "Gross Wt. 303gms | Net wt. 300gms",
-                "MRP: ₹55", "Find cuts for every recipe",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(gizzard);
-
-        ModelClass drumstick = new ModelClass(R.drawable.chicken_drumstick,
-                "Chicken Drumstick",
-                "Our skinless and bone-in Chicken Drumsticks are cut from the lower leg portions. These juicy portions are flavourful and tender while being one of the fleshiest cuts of the bird. They contain a little more fat as compared to chicken wings. In terms of nutrients, these succulent portions are high in proteins and vitamins. Thoroughly cleaned and cut, these drumsticks are ideal for grilled or fried dishes. Order online from Licious and get fresh Chicken Drumsticks home delivered.",
+        ModelClass biryani = new ModelClass(R.drawable.mutton_biryani,
+                "Goat Biryani Cut",
+                "Expertly carved, ideal for Awadhi, Parsi, Hyderabadi Biryani and every other biryani imaginable! A dominance of bone-in pieces ensure flavours infuse into the biryani for a rich, authentic taste. The fibrous texture of goat meat amalgamates the flavours of spices that go into your biryani of choice.",
                 "Gross Wt. 666gms | Net wt. 500gms",
-                "MRP: ₹235", "Only the Safest Chicken!",
+                "MRP: ₹549", "The Safest Mutton in Town",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(drumstick);
+        modelClasses.add(biryani);
 
-        ModelClass liver = new ModelClass(R.drawable.chicken_liver,
-                "Chicken Liver",
-                "At Licious, the Chicken Liver is fresh and thoroughly cleaned and cut into pieces. The chicken liver has a strong flavour and a smooth texture when raw which turns to being dense when cooked. Obtained from farm-raised, healthy chickens, the chicken liver is a rich source of vitamins, protein, and iron. Ideal for pan-fried or stir-fried dishes, you can prepare delicious Chicken Liver Masala with a blend of spices and herbs. Buy Chicken Liver online and get it delivered to your doorstep.",
-                "Gross Wt. 354gms | Net wt. 350gms",
-                "MRP: ₹65", "Find cuts for every recipe",
+        ModelClass lamb = new ModelClass(R.drawable.mutton_lamb,
+                "Lamb - Boneless",
+                "Our medium-sized boneless portions of lamb meat are neatly cut from the legs. These meat portions are juicy with a strong flavour. In terms of nutrients, these meat portions are rich in proteins, vitamins and minerals. High on flavour, these dark meat portions are lean and low in fat as compared to richer curry, shoulder or biryani cuts. Ideal for curries or grilled preparations, these are perfect if you prefer more flesh and no bones in the meat. Buy from Licious online and get fresh Lamb Boneless Leg meat portions home delivered.",
+                "Gross Wt. 758gms | Net wt. 500gms",
+                "MRP: ₹839", "The Safest Mutton in Town",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(lamb);
+
+        ModelClass ribs = new ModelClass(R.drawable.mutton_ribs,
+                "Goat Ribs and Chops",
+                "Mutton Ribs and Chops are mainly cut from the rack of the Goat, which is the upper centre part of the goat's body. The package also includes cuts from the shoulders, ribs and loins. Mutton Chops are T-bone steaks that give you tender meat once cooked evenly. Goat Ribs and Chops are strong in flavour and tender in texture. These are also the fattier cuts of the Goat. Rich in proteins and minerals, Goat Ribs and Chops are an excellent choice for barbecuing or making a curry. Buy Goat Ribs and Chops online from Licious and get home delivery. ",
+                "Gross Wt. 588gms | Net wt. 500gms",
+                "MRP: ₹599", "300+ speciality cuts",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(ribs);
+
+        ModelClass liver = new ModelClass(R.drawable.mutton_liver,
+                "Mutton Liver Chunks",
+                "Also known as Kaleji, the Lamb Liver Pieces from Licious are cleaned and sinew-free. These smooth-textured pieces are a nutrient-dense superfood. The Lamb Liver is high in minerals, vitamins and protein while it has a lower level of fat as compared to muscle meats. Ideal for a quick pan-fried meal, you can easily prepare a flavourful Lamb Liver Masala with a blend of dry spices and herbs. Order the Lamb Liver pieces online from Licious in just a few clicks.",
+                "Gross Wt. 250gms | Net wt. 250gms",
+                "MRP: ₹229", "300+ speciality cuts",
                 "Today 7 AM - 10 AM");
         modelClasses.add(liver);
 
-        ModelClass thigh = new ModelClass(R.drawable.chicken_thigh,
-                "Chunkier Chicken Thigh with Bone",
-                "Bone-in pieces of chicken thigh which have a moderate firm texture that turn juicy when cooked. Rich in proteins and minerals, this extra-meaty cut is ideal for slow-cooked preparations.",
-                "Gross Wt. 667gms | Net wt. 500gms",
-                "MRP: ₹239", "Only the Safest Chicken!",
+        ModelClass tail = new ModelClass(R.drawable.mutton_tail,
+                "Goat Tail - Hind Meat",
+                "Thoroughly cleaned and cut into even pieces, Goat Tail is perfect for making comforting soups and is even enjoyed as a deep-fried treat! Order Goat Tail online from Licious, obtained from grass-fed, humanely raised goats, and prepare delicious dishes.",
+                "Gross Wt. 263gms | Net wt. 200gms",
+                "MRP: ₹189", "The Safest Mutton in Town",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(thigh);
+        modelClasses.add(tail);
+
+        ModelClass kapura = new ModelClass(R.drawable.mutton_kapura,
+                "Mutton Kapura Large",
+                "Mutton kapura is known for being rich in multiple nutrients, such as magnesium and zinc. This delicacy offers a mild yet rich flavour that is best enjoyed cooked with a variety of spices, or deep fried.",
+                "Gross Wt. 296gms | Net wt. 250gms",
+                "MRP: ₹199", "The Licious Promise",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(kapura);
 
     }
 

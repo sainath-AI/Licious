@@ -13,7 +13,7 @@ import com.masai.licious.R;
 
 import java.util.ArrayList;
 
-public class ColdCutsAdapter extends RecyclerView.Adapter<COldCutsViewHolder> {
+public class ColdCutsAdapter extends RecyclerView.Adapter<ColdCutsViewHolder> {
 
     ArrayList<ModelClass> modelClassArrayList;
 
@@ -23,13 +23,13 @@ public class ColdCutsAdapter extends RecyclerView.Adapter<COldCutsViewHolder> {
 
     @NonNull
     @Override
-    public COldCutsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ColdCutsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.chicken_item_layout,parent,false);
-        return new COldCutsViewHolder(view);
+        return new ColdCutsViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  COldCutsViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ColdCutsViewHolder holder, int position) {
         ModelClass modelClass=modelClassArrayList.get(position);
         holder.setdata(modelClass);
     }
@@ -39,13 +39,13 @@ public class ColdCutsAdapter extends RecyclerView.Adapter<COldCutsViewHolder> {
         return modelClassArrayList.size();
     }
 }
-class COldCutsViewHolder extends RecyclerView.ViewHolder {
+class ColdCutsViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView mIvImage;
     private TextView mTvTitle, mTvDescription, mTvWeight, mTvPrice, mTvPlayVideo, mTvDeliveryTime;
 
 
-    public COldCutsViewHolder(@NonNull View itemView) {
+    public ColdCutsViewHolder(@NonNull View itemView) {
         super(itemView);
         iniViews(itemView);
     }
