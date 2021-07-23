@@ -15,13 +15,6 @@ private ImageButton igbtnback;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_refer_earn);
-        igbtnback=findViewById(R.id.igBackbtn);
-        igbtnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(ReferEarnActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

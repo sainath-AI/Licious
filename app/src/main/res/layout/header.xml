@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="@dimen/dp_200"
-    >
+    android:layout_height="@dimen/dp_200">
 
     <ImageView
         android:id="@+id/ImgMenu"
         android:layout_width="wrap_content"
         android:layout_height="90dp"
-        android:layout_marginTop="10dp"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
         android:src="@drawable/hearder" />
+
     <ImageView
         android:id="@+id/ImgMetopia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/metopia"
         android:layout_below="@+id/ImgMenu"
-        android:scaleType="fitXY"
         android:layout_marginStart="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
+        android:scaleType="fitXY"
+        android:src="@drawable/metopia"
 
         />
 

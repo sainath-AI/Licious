@@ -68,6 +68,8 @@
     <dimen name="dp_200">200dp</dimen>
 
 
+    <dimen name="dp_250">250dp</dimen>
+    <dimen name="dp_300">300dp</dimen>
 
     <dimen name="sp_5">5sp</dimen>
     <dimen name="sp_6">6sp</dimen>
@@ -115,7 +117,6 @@
     <dimen name="sp_48">48sp</dimen>
     <dimen name="sp_49">49sp</dimen>
     <dimen name="sp_50">50sp</dimen>
-    <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_180">180dp</dimen>
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_140">140dp</dimen>

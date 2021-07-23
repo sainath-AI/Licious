@@ -1,4 +1,4 @@
-package com.masai.licious;
+package com.masai.licious.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import com.masai.licious.R;
 
 public class SearchActivity extends AppCompatActivity {
 private ImageButton igbtnCarts;
@@ -17,7 +19,7 @@ private ImageButton igbtnCarts;
         igbtnCarts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SearchActivity.this,CartActivity.class);
+                Intent intent=new Intent(SearchActivity.this, CartActivity.class);
                 startActivity(intent);
             }
         });

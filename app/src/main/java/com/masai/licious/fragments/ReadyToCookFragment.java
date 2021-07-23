@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.ReadyAdapter;
 import com.masai.licious.R;
@@ -24,14 +23,11 @@ public class ReadyToCookFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
 
-
-    public ReadyToCookFragment(){
-
-    }
     public  static  ReadyToCookFragment newInstance(){
         ReadyToCookFragment readyToCookFragment=new ReadyToCookFragment();
         return readyToCookFragment;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,89 +52,86 @@ public class ReadyToCookFragment extends Fragment {
     }
 
     private void buildRecyclerViewData() {
-        ModelClass tangdi = new ModelClass(R.drawable.chicken_tangdi,
-                "Chicken Tangdi - Biryani Cut",
-                "Succulent and tender pieces of chicken that have been taken from the leg of the chicken, cut into drumsticks and whole thigh pieces. A mixture of white and dark meat these pieces of chicken are loaded with flavour and deliver mouth-watering goodness with every bite. Juicy and tender they are perfect for every kind of biryani, from Hyderabadi to Calicut biryani.\n" +
-                        "Order Chicken Tangdi - Biryani Cut online on Licious and get it delivered to your home.",
-                "Gross Wt. 600gms | Net wt. 550gms",
-                "MRP: ₹229", "Get value for money!",
+        ModelClass rtcChickenTikka = new ModelClass(R.drawable.rtc_chickentikka,
+                "Chicken Tikka | Ready To Cook",
+                "An ode to one of India's oldest recipes. Boneless chicken chunks marinated twice for a bite bursting with flavour. An authentic Licious take on the classic chicken tikka with a desirable spicy note that lingers.",
+                "Pieces 9-11 | Net wt. 450gms",
+                "MRP: ₹299", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(tangdi);
+        modelClasses.add(rtcChickenTikka);
 
-        ModelClass country = new ModelClass(R.drawable.chicken_country,
-                "Smoky Turmeric Country Chicken - Curry Cut With Skin",
-                "Smoky Turmeric Country Chicken is a traditional preparation of country chicken (Nati Koli) smoked & marinated in turmeric. This cut of chicken comes from the Aseel Cross Breed birds & offers a slightly tougher texture which is characteristic of authentic country chicken birds.\n" +
-                        "Known for its anti-bacterial & anti-inflammatory properties, turmeric is often used in a variety of marinades. Licious Smoky Turmeric Country Chicken allows for easy preparation of delicious curries and fries, with its perfectly cut pieces ideal for quick & easy cooking!",
-                "Gross Wt. 510gms | Net wt. 500gms",
-                "MRP: ₹349", "Only the Safest Chicken!",
+        ModelClass rtcAmritsariFish = new ModelClass(R.drawable.rtc_amritsarifish,
+                "Amritsari Fish | Ready to Cook",
+                "The ready-to-deep-fry Amritsari Fish from Licious offers pieces of Basa fish marinated in chillies, carom (ajwain) seeds, white vinegar and other spices. Prepared expertly, the marinade gives this dish a stimulating, spicy flavour, making it a perfect Amritsari dish. Ideal for deep frying, you can sprinkle some chaat masala while serving the dish. Buy Amritsari Fish online and enjoy delicious fish appetizers at home.",
+                "Pieces 7-10 | Net wt. 300gms",
+                "MRP: ₹279", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(country);
+        modelClasses.add(rtcAmritsariFish);
 
-        ModelClass large = new ModelClass(R.drawable.chicken_large,
-                "Chicken Curry Cut Large - Large Pack",
-                "A mix of dark and white meat, our large Chicken Curry Cut pieces include Two leg, Two wing without tip, and Two breast quarter with backbone. Obtained from pasture-raised healthy chickens, the meat has a rich, juicy flavour with a tender, smooth and moderate-firm texture. Best suited for curries, the package includes both boneless and bone-in curry cut pieces. Order hormone-free Chicken Curry Cut pieces online and get them delivered fresh at your doorstep.",
-                "Gross Wt. 1026gms | Net wt. 1000gms",
-                "MRP: ₹285", "Get value for money!",
+        ModelClass rtcTandooriChicken = new ModelClass(R.drawable.rtc_tandoorichicken,
+                "Tandoori Chicken | Ready in 8 Minutes",
+                "Smokey, spicy and mildly tangy, this Tandoori Chicken is the must-have appetiser at any meal. Marinated in a mixture of flavourful spices and masalas, the highlight of the dish is the heat from the Kashmiri chillies and the juiciness of the chicken. Serve it with some roomali roti or chapati have it on its own with a squeeze of lime and pickled onion.",
+                "Pieces 4 | Net wt. 350gms",
+                "MRP: ₹249", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(large);
+        modelClasses.add(rtcTandooriChicken);
 
-        ModelClass mince = new ModelClass(R.drawable.chicken_mince,
-                "Chicken Mince - Large Pack",
-                "Chicken Mince consists of Chicken Breast Fillets ground to perfection! Packed with proteins and minerals, Chicken Mince is a versatile meat that can be ideal for making patties, kebabs, keema, or meatballs. Order tender, fine-grained Chicken Mince online from Licious and get it delivered to your door.\n" +
+        ModelClass rtcPrawns = new ModelClass(R.drawable.rtc_prawns,
+                "Prawns Zaffrani | Ready in 8 Minutes",
+                "Creamy and enhanced with saffron, our medium-sized, tail-on Prawns Zaffrani symbolizes royal delicacy. A batch of fresh prawns marinated using cream cheese, garlic, cashews and one of the most valuable spices – saffron, this dish has its own distinct flavour. You can pan-fry, oven bake or grill the prawns until cooked completely. Buy ready-to-cook Prawns Zaffrani online from Licious and enjoy delicious, crispy bites of prawns at home.",
+                "Pieces 12-16 | Net wt. 200gms",
+                "MRP: ₹332", "How To Cook",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(rtcPrawns);
+
+        ModelClass rtcKebabPlatter = new ModelClass(R.drawable.rtc_kebabplatter,
+                "Assorted Kebab Platter | Ready to Cook",
+                "Indulge in our Nawabi-style kebabs as you watch the gentleman’s game! The platter consists of Afghani Murgh Seekh Kebab, Purani Dilli Mutton Seekh Kebab & Lucknowi Galouti Kebab - each ready within 8 minutes!\n" +
                         "\n" +
-                        "Note: Licious Chicken is thoroughly cleaned before it is minced. You can cook it straight from the pack. To retain the taste, texture and flavour of the mince, please do not wash it.",
-                "Gross Wt. 1130gms | Net wt. 900gms",
-                "MRP: ₹479", "Only the Safest Chicken!",
+                        "Note: Use within 15 days from the date of manufacture. FSSAI Category 8.3.2: Heat-treated processed comminuted meat and poultry products.",
+                "Pieces 14 | Net wt. 14",
+                "MRP: ₹798", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(mince);
+        modelClasses.add(rtcKebabPlatter);
 
-        ModelClass breast = new ModelClass(R.drawable.chicken_breast,
-                "Chicken Breast Fillet - Thinly Sliced",
-                "Chicken Breast is one of the meatier cuts of a chicken, which comes from the breast-bone of the bird. This fillet cut is skinless and thinly sliced for more even cooking. A good source of vitamins and minerals, Chicken Breast, is also a great choice for a lean protein diet. Apply a flavourful spice-rub and pan-fry, bake or the Chicken Breast Fillet to relish this versatile cut.",
-                "Gross Wt. 1303gms | Net wt. 450gms",
-                "MRP: ₹259", "Find cuts for every recipe",
+        ModelClass rtcChickenBones = new ModelClass(R.drawable.rtc_chickenbones,
+                "Masala Chicken Soup Bones",
+                "Masala Chicken Soup bones from Licious are generously seasoned with a secret blend of herbs and spices. Ready for you to prepare a delicious chicken broth, these bones are a rich source of minerals like calcium and vitamins. Order Masala Chicken Soup Bones from Licious and make a spicy and hearty bone broth at home.",
+                "Pieces 10-11 | Net wt. 250gms",
+                "MRP: ₹89", "Get value for money!",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(breast);
+        modelClasses.add(rtcChickenBones);
 
-        ModelClass lollipop = new ModelClass(R.drawable.chicken_lollipop,
-                "Chicken Lollipop",
-                "Chicken Lollipops at Licious are expertly cleaned, cut and trimmed. The meat is cut loose from the wing bone and pushed down towards the end of the drumstick. Chicken Lollipops are rich in flavour and tender in texture. They are ideal for a protein-rich meal. Chicken Lollipops can be pan-fried or deep-fried to make perfect starters. The meat turns juicy and succulent after cooking. Order Chicken Lollipops from Licious and prepare crispy fried lollipops at home.",
-                "Gross Wt. 10 | Net wt. 10",
-                "MRP: ₹129", "Get value for money!",
+        ModelClass rtcFishFingers = new ModelClass(R.drawable.rtc_fishfingers,
+                "Fish Fingers | Ready to Cook",
+                "Marinated with paanch-phoran spices and coated with panko crumbs, our Bengali Style Fish Finger preparation is a traditional one. Boneless Basa pieces marinated in kasundi mustard, red chilli, garlic-ginger and gram flour make this dish mildly spicy. Deep fry until the fish fingers turn golden-brown on all sides and serve with chutney, lemon and onion slices. Buy the ready to cook package from Licious online and snack on Bengali Style Fish Fingers right at home.",
+                "Pieces 9-12 | Net wt. 250gms",
+                "MRP: ₹299", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(lollipop);
+        modelClasses.add(rtcFishFingers);
 
-        ModelClass gizzard = new ModelClass(R.drawable.chicken_gizzard,
-                "Chicken Gizzard",
-                "Chicken Gizzards from Licious are freshly cut and thoroughly cleaned. Obtained from the muscular areas around the digestive tract of the bird, the Gizzards have a unique and strong flavour and are firm in texture. They are also a rich source of proteins and vitamins. Chicken Gizzards have a low fat content and can be braised or used in starters when fried. Order Chicken Gizzards online from Licious to enjoy home-made fried gizzards or chicken gizzard masala.",
-                "Gross Wt. 303gms | Net wt. 300gms",
-                "MRP: ₹55", "Find cuts for every recipe",
+        ModelClass rtcMixedPlatter = new ModelClass(R.drawable.rtc_mixedplatter,
+                "Mixed Party Platter | Ready to Cook",
+                "Enjoy a mix of chicken and seafood with our special party platters! Get the party started with Nilgiri Fish Tikka (7-9 pcs), Creamy Afghani Chicken (7-9 pcs) & Prawns Zaffrani (7-9 pcs).",
+                "Pieces 24-27 | Net wt. 800gms",
+                "MRP: ₹499", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(gizzard);
+        modelClasses.add(rtcMixedPlatter);
 
-        ModelClass drumstick = new ModelClass(R.drawable.chicken_drumstick,
-                "Chicken Drumstick",
-                "Our skinless and bone-in Chicken Drumsticks are cut from the lower leg portions. These juicy portions are flavourful and tender while being one of the fleshiest cuts of the bird. They contain a little more fat as compared to chicken wings. In terms of nutrients, these succulent portions are high in proteins and vitamins. Thoroughly cleaned and cut, these drumsticks are ideal for grilled or fried dishes. Order online from Licious and get fresh Chicken Drumsticks home delivered.",
-                "Gross Wt. 666gms | Net wt. 500gms",
-                "MRP: ₹235", "Only the Safest Chicken!",
+        ModelClass rtcChickenPlatter = new ModelClass(R.drawable.rtc_chickenplatter,
+                "Chicken Party Platter | Ready to Cook",
+                "Celebrations done right with a mix of Spicy & Creamy in our best-loved Chicken Marinades! Start with the heat of Habanero Chicken Wings (10 pcs), take the middle path with Chicken Tikka Boneless (7-8 pcs), and close with Creamy Afghani Chicken (7-8 pcs). There's something for every Chicken-loving palate!",
+                "Pieces 24-28 | Net wt. 900gms",
+                "MRP: ₹427", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(drumstick);
+        modelClasses.add(rtcChickenPlatter);
 
-        ModelClass liver = new ModelClass(R.drawable.chicken_liver,
-                "Chicken Liver",
-                "At Licious, the Chicken Liver is fresh and thoroughly cleaned and cut into pieces. The chicken liver has a strong flavour and a smooth texture when raw which turns to being dense when cooked. Obtained from farm-raised, healthy chickens, the chicken liver is a rich source of vitamins, protein, and iron. Ideal for pan-fried or stir-fried dishes, you can prepare delicious Chicken Liver Masala with a blend of spices and herbs. Buy Chicken Liver online and get it delivered to your doorstep.",
-                "Gross Wt. 354gms | Net wt. 350gms",
-                "MRP: ₹65", "Find cuts for every recipe",
+        ModelClass rtcRoastChicken = new ModelClass(R.drawable.rtc_roastchicken,
+                "Sunday Roast Chicken - Whole | Ready to Cook",
+                "Delight your taste buds with some amazing Sunday Roast Chicken. Show off your culinary magic (minus the hassle) with our fresh, pre-marinated and easy to cook chicken. The aromatic spice mix in the oil brings out all the natural flavours of the meat and keeps it juicy. Enjoy the feast!",
+                "Pieces 1 | Net wt. 1200gms",
+                "MRP: ₹499", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(liver);
-
-        ModelClass thigh = new ModelClass(R.drawable.chicken_thigh,
-                "Chunkier Chicken Thigh with Bone",
-                "Bone-in pieces of chicken thigh which have a moderate firm texture that turn juicy when cooked. Rich in proteins and minerals, this extra-meaty cut is ideal for slow-cooked preparations.",
-                "Gross Wt. 667gms | Net wt. 500gms",
-                "MRP: ₹239", "Only the Safest Chicken!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(thigh);
-
+        modelClasses.add(rtcRoastChicken);
     }
 }

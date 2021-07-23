@@ -11,7 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.masai.licious.LiciousMeatopia;
+import com.masai.licious.LiciousWay;
+import com.masai.licious.NotificationActivity;
 import com.masai.licious.R;
+import com.masai.licious.ReferEarnActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,16 +101,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.search:
-                //    Intent intent1=new Intent(HomeActivity.this,---------);
-                //   startActivity(intent1);
+                   Intent intent1=new Intent(HomeActivity.this, SearchActivity.class);
+                  startActivity(intent1);
                 break;
             case R.id.bell:
-                //    Intent intent2=new Intent(HomeActivity.this,-------);
-                //  startActivity(intent2);
+                Intent intent2=new Intent(HomeActivity.this, NotificationActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.cart:
-                //   Intent intent3=new Intent(HomeActivity.this,-------);
-                //   startActivity(intent3);
+                Intent intent3=new Intent(HomeActivity.this, CartActivity.class);
+                  startActivity(intent3);
                 break;
             case R.id.fish:
             case R.id.bestSeller:
@@ -141,16 +145,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 goToPackageActivity(7);
                 break;
             case R.id.metopiaJoin:
-                //  Intent intent4=new Intent(HomeActivity.this,-----);
-                //   startActivity(intent4);
+                  Intent intent4=new Intent(HomeActivity.this, LiciousMeatopia.class);
+                startActivity(intent4);
                 break;
             case R.id.licious1:
-                //  Intent intent5 =new Intent(HomeActivity.this,-----);
-                //startActivity(intent5);
+                 Intent intent5 =new Intent(HomeActivity.this, LiciousWay.class);
+                startActivity(intent5);
                 break;
             case R.id.referNow:
-                // Intent intent6=new Intent(HomeActivity.this,-----);
-                //startActivity(intent6);
+                Intent intent6=new Intent(HomeActivity.this, ReferEarnActivity.class );
+                startActivity(intent6);
                 break;
 
         }

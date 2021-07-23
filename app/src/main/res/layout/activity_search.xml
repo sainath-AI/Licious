@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
+    tools:context=".activities.SearchActivity"
     tools:layout_gravity="center">
 
     <ImageView
         android:id="@+id/imageView26"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="252dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -19,8 +19,8 @@
 
     <ImageView
         android:id="@+id/imageView25"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="252dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
@@ -29,8 +29,8 @@
 
     <ImageView
         android:id="@+id/imageView27"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,8 @@
 
     <ImageView
         android:id="@+id/imageView28"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="252dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -51,8 +51,8 @@
 
     <ImageView
         android:id="@+id/imageView21"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
@@ -61,8 +61,8 @@
 
     <ImageView
         android:id="@+id/imageView23"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -71,8 +71,8 @@
 
     <ImageView
         android:id="@+id/imageView24"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="136dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,8 +83,8 @@
 
     <ImageView
         android:id="@+id/imageView22"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -93,8 +93,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="264dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,8 +105,8 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,8 +114,8 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
@@ -191,8 +191,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="@dimen/dp_80"
-        android:layout_height="@dimen/dp_80"
+        android:layout_width="@dimen/dp_75"
+        android:layout_height="@dimen/dp_75"
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
