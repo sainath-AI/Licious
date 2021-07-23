@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
+import com.masai.licious.Adapters.EggsAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
 
@@ -47,9 +48,9 @@ public class EggsFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        EggsAdapter eggsAdapter=new EggsAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(eggsAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }

@@ -84,11 +84,9 @@
             <ImageView
                 android:layout_centerVertical="true"
                 android:id="@+id/cart"
-
-                android:layout_width="@dimen/dp_35"
-                android:layout_height="@dimen/dp_35"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_5"
-
                 android:layout_toEndOf="@+id/bell"
                 android:src="@drawable/ic_cart" />
 

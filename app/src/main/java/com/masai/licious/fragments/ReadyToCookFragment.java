@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Adapters.ReadyAdapter;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
@@ -47,9 +48,9 @@ public class ReadyToCookFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        ReadyAdapter readyAdapter=new ReadyAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(readyAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }

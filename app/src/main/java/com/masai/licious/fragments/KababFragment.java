@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
+import com.masai.licious.Adapters.KababAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
 
@@ -47,9 +48,9 @@ public class KababFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        KababAdapter kababAdapter=new KababAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(kababAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }
