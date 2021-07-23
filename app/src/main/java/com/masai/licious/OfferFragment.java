@@ -24,7 +24,6 @@ public class OfferFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-
     public OfferFragment() {
         // Required empty public constructor
     }

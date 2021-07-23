@@ -1,6 +1,6 @@
-package com.masai.licious.Adapters;
+package com.masai.licious.categories;
 
-public class ModelClass {
+public class CategoryModel {
     private final int image;
     private final String title;
     private final String description;
@@ -9,9 +9,7 @@ public class ModelClass {
     private final String playVideo;
     private final String deliveryTime;
 
-
-
-    public ModelClass(int image, String title, String description, String weight, String price, String playVideo, String deliveryTime) {
+    public CategoryModel(int image, String title, String description, String weight, String price, String playVideo, String deliveryTime) {
         this.image = image;
         this.title = title;
         this.description = description;
@@ -48,5 +46,4 @@ public class ModelClass {
     public String getDeliveryTime() {
         return deliveryTime;
     }
-
 }
