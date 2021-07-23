@@ -27,6 +27,14 @@
     <string name="navigation_drawrer_open">open navigation drawer</string>
     <string name="navigation_drawrer_close">close navigation drawer</string>
     <string name="best_sellers">Best Sellers</string>
+    <string name="choose_your_delivery_location">YourCart</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="String1">At Licious, we work closely with our farmers to ensure the best ethically-raised breeds that are administered nutrient-rich feed under stringent biosecurity protocols. Utmost care at the source is what sets our quality beyond ordinary.</string>
+    <string name="String2">Our first-of-its-kind world-class production unit is temperature controlled to maintain natural goodness and nutrients. We adhere to highest quality standards by combining meat science and artisanal butchery.</string>
+    <string name="String3"><![CDATA[Our highly qualified team of doctors & chefs strictly comply with the FSSAI hygiene standards for handling & processing to offer you premium grade gourmet meat, fish and seafood products.]]></string>
+    <string name="String4">Day’s cut lamb and chicken from our farms, and day’s catch seafood straight from the coast, delivered chilled and not frozen so you get meat as fresh as it can get.</string>
+    <string name="String5"><![CDATA[Our premium meat, fish and seafood products are cleaned, wastage-free & cook faster with minimum moisture loss so you get more value for your money.]]></string>
+
     <string name="choose_delivery_location">Choose your delivery location</string>
     <string name="order_freshest_meat"><![CDATA[Order the Freshest Chicken Mutton, Seafood & Eggs]]></string>
     <string name="search_delivery_location">Search for your delivery location</string>

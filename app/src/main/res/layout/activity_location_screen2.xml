@@ -22,7 +22,7 @@
         android:background="#2C2A2A"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4"
-        app:srcCompat="@drawable/ic__7864404941556280995" />
+        app:srcCompat="@drawable/whitebacksvg" />
 
     <View
         android:id="@+id/view5"
@@ -43,7 +43,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view4"
-        app:srcCompat="@drawable/ic__270682101556280922" />
+        app:srcCompat="@drawable/targetlocationredsvg" />
 
     <TextView
         android:id="@+id/textView6"
@@ -78,7 +78,7 @@
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/view6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic__028692271535694869" />
+        app:srcCompat="@drawable/searchbarsvg" />
 
     <EditText
         android:id="@+id/etDeliverySearch"

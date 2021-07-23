@@ -38,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic__7864404941556280995" />
+        app:srcCompat="@drawable/whitebacksvg" />
 
     <TextView
         android:id="@+id/textView2"
@@ -75,7 +75,7 @@
         android:layout_marginStart="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic__028692271535694869" />
+        app:srcCompat="@drawable/searchbarsvg" />
 
     <TextView
         android:id="@+id/tvDelivery"
@@ -135,6 +135,6 @@
         app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/textView5"
-        app:srcCompat="@drawable/ic__0315406981540882595" />
+        app:srcCompat="@drawable/locationredsvg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

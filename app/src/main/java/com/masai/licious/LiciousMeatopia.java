@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class NotificationsOffers extends AppCompatActivity {
+public class LiciousMeatopia extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notifications_offers);
+        setContentView(R.layout.activity_licious_metopia);
     }
 }
