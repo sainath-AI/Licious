@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ColdCutsAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
@@ -20,19 +19,14 @@ import com.masai.licious.R;
 import java.util.ArrayList;
 
 
-public class ColdcutsFragment extends Fragment {
+public class ColdCutsFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
 
-
-    public ColdcutsFragment(){
-
-    }
-    public  static  ColdcutsFragment newInstance(){
-        ColdcutsFragment coldcutsFragment=new ColdcutsFragment();
+    public  static ColdCutsFragment newInstance(){
+        ColdCutsFragment coldcutsFragment=new ColdCutsFragment();
         return coldcutsFragment;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
