@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Adapters.SaverAdapter;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
@@ -48,9 +49,9 @@ public class SaverFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        SaverAdapter saverAdapter=new SaverAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(saverAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }

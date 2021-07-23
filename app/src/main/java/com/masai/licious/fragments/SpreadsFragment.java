@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Adapters.SpreadsAdapter;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
@@ -50,9 +51,9 @@ public class SpreadsFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        SpreadsAdapter spreadsAdapter=new SpreadsAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(spreadsAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }
