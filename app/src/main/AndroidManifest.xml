@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.masai.licious">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -13,17 +13,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Licious">
-
-        <activity android:name=".NotificationsOffers"></activity>
+        <activity android:name=".LiciousMeatopia"></activity>
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".LiciousWay" />
+        <activity android:name=".ReferEarnActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".NotificationsOffers" />
         <activity android:name=".LocationScreen2" />
         <activity android:name=".LocationScreen" />
-        <activity android:name=".Category"/>
-        <activity android:name=".LoginScreenTwo"/>
-        <activity android:name=".activities.HomeActivity"/>
-        <activity android:name=".LoginScreenOne"/>
+        <activity android:name=".Category" />
+        <activity android:name=".LoginScreenTwo" />
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".LoginScreenOne" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

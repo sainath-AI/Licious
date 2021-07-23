@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
 
     
-    <style name="Theme.Licious" parent="Theme.Design.Light.NoActionBar">
+    <style name="Theme.Licious" parent="Theme.AppCompat.DayNight.NoActionBar">
 
 >>>>>>> a59b878435e6d107678581e3ccae496841e71722
         <!-- Primary brand color. -->
