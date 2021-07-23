@@ -38,7 +38,6 @@ public class KababFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_kabab, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -141,4 +140,6 @@ public class KababFragment extends Fragment {
         modelClasses.add(thigh);
 
     }
+
+
 }

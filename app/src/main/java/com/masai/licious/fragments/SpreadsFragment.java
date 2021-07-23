@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 
 public class SpreadsFragment extends Fragment {
+
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
 

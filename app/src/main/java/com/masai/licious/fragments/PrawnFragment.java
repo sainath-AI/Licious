@@ -22,7 +22,6 @@ import java.util.ArrayList;
 public class PrawnFragment extends Fragment {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
-
     public PrawnFragment(){
 
     }
@@ -39,7 +38,6 @@ public class PrawnFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_prawn, container, false);
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -142,4 +140,6 @@ public class PrawnFragment extends Fragment {
         modelClasses.add(thigh);
 
     }
+
+
 }

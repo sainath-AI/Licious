@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ChickenAdapter;
+import com.masai.licious.Adapters.FishAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
 
@@ -20,9 +21,11 @@ import java.util.ArrayList;
 
 
 public class FishFragment extends Fragment {
-
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+
+
+
 
     public FishFragment(){
 
@@ -39,18 +42,18 @@ public class FishFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_fish, container, false);
     }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView1);
+        recyclerView=view.findViewById(R.id.recyclerView);
         buildRecyclerViewData();
         setRecyclerdata();
     }
-
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        FishAdapter fishAdapter=new FishAdapter(modelClasses);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
-        recyclerView.setAdapter(chickenAdapter);
+        recyclerView.setAdapter(fishAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
     }
@@ -141,4 +144,5 @@ public class FishFragment extends Fragment {
         modelClasses.add(thigh);
 
     }
+
 }
