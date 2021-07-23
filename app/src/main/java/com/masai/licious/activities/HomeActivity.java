@@ -109,6 +109,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 //   startActivity(intent3);
                 break;
             case R.id.fish:
+            case R.id.bestSeller:
                 goToPackageActivity(0);
                 break;
             case R.id.chicken:
@@ -119,25 +120,25 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 goToPackageActivity(2);
                 break;
             case R.id.readytocook:
-                goToPackageActivity(3);
-                break;
-            case R.id.spreads:
-                goToPackageActivity(4);
-                break;
-            case R.id.eggs:
-                goToPackageActivity(5);
-                break;
-            case R.id.prawn:
-                goToPackageActivity(6);
-                break;
-            case R.id.kabab:
-                goToPackageActivity(7);
-                break;
-            case R.id.coldcuts:
                 goToPackageActivity(8);
                 break;
-            case R.id.saver:
+            case R.id.spreads:
                 goToPackageActivity(9);
+                break;
+            case R.id.eggs:
+                goToPackageActivity(4);
+                break;
+            case R.id.prawn:
+                goToPackageActivity(5);
+                break;
+            case R.id.kabab:
+                goToPackageActivity(6);
+                break;
+            case R.id.coldcuts:
+                goToPackageActivity(3);
+                break;
+            case R.id.saver:
+                goToPackageActivity(7);
                 break;
             case R.id.metopiaJoin:
                 //  Intent intent4=new Intent(HomeActivity.this,-----);
@@ -150,9 +151,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.referNow:
                 // Intent intent6=new Intent(HomeActivity.this,-----);
                 //startActivity(intent6);
-                break;
-            case R.id.bestSeller:
-                goToPackageActivity(10);
                 break;
 
         }
