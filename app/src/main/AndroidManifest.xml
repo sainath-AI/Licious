@@ -26,8 +26,9 @@
         <activity android:name=".activities.LocationScreenTwo" />
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".categories.Fish" />
+        <activity android:name=".categories.Chicken" />
         <activity android:name=".categories.Mutton" />
-        <activity android:name=".categories.ReadyToCook" />
+        <activity android:name=".categories.ReadyToCook"/>
         <activity android:name=".activities.PackageActivity" />
         <activity android:name=".NotificationsOffers" />
     </application>
