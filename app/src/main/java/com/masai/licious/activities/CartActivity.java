@@ -1,15 +1,14 @@
-package com.masai.licious;
+package com.masai.licious.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.masai.licious.activities.HomeActivity;
+import com.masai.licious.R;
 
 public class CartActivity extends AppCompatActivity {
 private ImageButton btnback;

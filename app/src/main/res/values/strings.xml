@@ -41,5 +41,6 @@
     <string name="or">Or</string>
     <string name="use_my_location">Use my location</string>
     <string name="use_my_current_location">Use my current location</string>
+    <string name="notifications">Notifications</string>
 
 </resources>

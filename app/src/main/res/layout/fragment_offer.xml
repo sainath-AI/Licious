@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ChickenFragment">
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.OfferFragment"
+    tools:layout_gravity="center">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView1"
+    <ImageView
+        android:id="@+id/imageView9"
         android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/notificationpic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="253dp"
+        android:layout_height="43dp"
+        android:text="  No Notifications Yet !"
+
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="303dp"
+        android:layout_height="55dp"
+        android:text="Don't worry ,you can explore these other options meanwhile"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <ImageButton
+        android:id="@+id/view13"
+        android:layout_width="149dp"
+        android:layout_height="133dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/shape7"
+        android:background="@drawable/referfriendssmallpic"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="198dp" />
+
+    <ImageButton
+        android:id="@+id/view14"
+        android:layout_width="149dp"
+        android:layout_height="133dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/shape7"
+        android:background="@drawable/metopiasmallpic"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
 
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

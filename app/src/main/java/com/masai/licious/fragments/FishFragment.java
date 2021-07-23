@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.masai.licious.Adapters.ChickenAdapter;
+
 import com.masai.licious.Adapters.FishAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
