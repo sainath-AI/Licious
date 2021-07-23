@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.masai.licious.R;
+import com.masai.licious.fragments.ChickenFragment;
 
 import java.util.ArrayList;
 
@@ -28,7 +29,7 @@ public class Chicken extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
     }
 
-    private void buildCategoryList() {
+    public void buildCategoryList() {
 
         CategoryModel tangdi = new CategoryModel(R.drawable.chicken_tangdi,
                 "Chicken Tangdi - Biryani Cut",

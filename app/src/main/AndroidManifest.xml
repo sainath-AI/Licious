@@ -13,8 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Licious"
         tools:ignore="AllowBackup">
-        <activity android:name=".categories.Spreads"></activity>
-        <activity android:name=".activities.SplashScreen" />
+        <activity android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".activities.LoginScreenOne" />
         <activity android:name=".activities.LoginScreenTwo" />
         <activity android:name=".activities.LocationScreenOne" />
@@ -23,13 +28,7 @@
         <activity android:name=".categories.Fish" />
         <activity android:name=".categories.Chicken" />
         <activity android:name=".categories.Mutton" />
-        <activity android:name=".categories.ReadyToCook">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".categories.ReadyToCook"/>
         <activity android:name=".activities.PackageActivity" />
         <activity android:name=".NotificationsOffers" />
     </application>
