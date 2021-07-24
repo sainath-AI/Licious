@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
 package="com.masai.licious">
 
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/Theme.Licious">
-    <activity android:name=".LiciousMeatopia" />
-    <activity android:name=".activities.SearchActivity" />
-    <activity android:name=".LiciousWay" />
-    <activity android:name=".ReferEarnActivity" />
-    <activity android:name=".activities.CartActivity" />
-    <activity android:name=".activities.HomeActivity" />
-    <activity android:name=".activities.LoginScreenOne" />
-    <activity android:name=".activities.LoginScreenTwo" />
-    <activity android:name=".activities.LocationScreenOne" />
-    <activity android:name=".activities.LocationScreenTwo" />
-    <activity android:name=".categories.Fish" />
-    <activity android:name=".categories.Chicken" />
-    <activity android:name=".categories.Mutton" />
-    <activity android:name=".categories.ReadyToCook" />
-    <activity android:name=".activities.PackageActivity" />
-    <activity android:name="com.masai.licious.NotificationActivity"/>
-    <activity android:name=".activities.SplashScreen">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Licious">
+        <activity android:name=".Cart.CheckOutActivity"></activity>
+        <activity android:name=".LiciousMeatopia" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".LiciousWay" />
+        <activity android:name=".ReferEarnActivity" />
+        <activity android:name=".activities.CartActivity" />
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.LoginScreenOne" />
+        <activity android:name=".activities.LoginScreenTwo" />
+        <activity android:name=".activities.LocationScreenOne" />
+        <activity android:name=".activities.LocationScreenTwo" />
+        <activity android:name=".categories.Fish" />
+        <activity android:name=".categories.Chicken" />
+        <activity android:name=".categories.Mutton" />
+        <activity android:name=".categories.ReadyToCook" />
+        <activity android:name=".activities.PackageActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".activities.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>

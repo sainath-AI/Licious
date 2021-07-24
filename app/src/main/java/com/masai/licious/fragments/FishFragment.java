@@ -8,20 +8,26 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.FishAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CommunicationListner;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class FishFragment extends Fragment {
+public class FishFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    ModelClass model;
+    CommunicationListner listner;
 
     public  static  FishFragment newInstance(){
         FishFragment fishFragment=new FishFragment();
@@ -134,4 +140,22 @@ public class FishFragment extends Fragment {
 
     }
 
+    @Override
+    public void onItemClick(ModelClass model) {
+        if (model != null) {
+            this.model = model;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    listner.onItemClick(model);
+                }
+            },1000);
+
+        }
+    }
+
+    public void setListner(CommunicationListner listner) {
+        Log.d("tag","here i am getting the listner");
+        this.listner = listner;
+    }
 }

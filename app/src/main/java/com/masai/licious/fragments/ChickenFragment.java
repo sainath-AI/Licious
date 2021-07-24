@@ -1,6 +1,9 @@
 package com.masai.licious.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,14 +16,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CommunicationListner;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
-public class ChickenFragment extends Fragment {
+public class ChickenFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+    CommunicationListner listner;
 
     public static ChickenFragment newInstance() {
         ChickenFragment chickenFragment = new ChickenFragment();
@@ -35,6 +42,17 @@ public class ChickenFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView=view.findViewById(R.id.recyclerView);
@@ -43,7 +61,7 @@ public class ChickenFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses);
+        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(chickenAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -137,4 +155,15 @@ public class ChickenFragment extends Fragment {
 
     }
 
+    @Override
+    public void onItemClick(ModelClass model) {
+        if (model != null) {
+            this.model = model;
+            listner.onItemClick(model);
+        }
+    }
+    public void setListner(CommunicationListner listner) {
+        Log.d("tag","here i am getting the listner");
+        this.listner = listner;
+    }
 }
