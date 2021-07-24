@@ -3,27 +3,31 @@ package com.masai.licious.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.masai.licious.Cart.BuyItemClickListner;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 public class FishAdapter extends RecyclerView.Adapter<FishViewHoder> {
     ArrayList<ModelClass> modelClassArrayList;
+    BuyItemClickListner listner;
 
-    public FishAdapter(ArrayList<ModelClass> modelClassArrayList) {
+    public FishAdapter(ArrayList<ModelClass> modelClassArrayList, BuyItemClickListner listner) {
         this.modelClassArrayList = modelClassArrayList;
+        this.listner=listner;
     }
     @NonNull
     @Override
     public FishViewHoder onCreateViewHolder(@NonNull  ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.chicken_item_layout,parent,false);
-        return new FishViewHoder(view);
+        return new FishViewHoder(view,listner);
 
     }
 
@@ -42,8 +46,12 @@ class FishViewHoder extends RecyclerView.ViewHolder {
 
     private ImageView mIvImage;
     private TextView mTvTitle, mTvDescription, mTvWeight, mTvPrice, mTvPlayVideo, mTvDeliveryTime;
-    public FishViewHoder(@NonNull  View itemView) {
+     Button  mBtnAddToCart;
+     BuyItemClickListner listner;
+
+    public FishViewHoder(@NonNull  View itemView , BuyItemClickListner listner) {
         super(itemView);
+        this.listner=listner;
         iniViews(itemView);
     }
 
@@ -55,9 +63,16 @@ class FishViewHoder extends RecyclerView.ViewHolder {
         mTvPrice = itemView.findViewById(R.id.tvPrice);
         mTvPlayVideo = itemView.findViewById(R.id.tvPlayVideo);
         mTvDeliveryTime = itemView.findViewById(R.id.tvDeliveryTime);
+        mBtnAddToCart=itemView.findViewById(R.id.btnAddToCart);
     }
 
     public void setdata(ModelClass modelClass) {
+        mBtnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listner.onItemClick(modelClass,getAdapterPosition());
+            }
+        });
         mIvImage.setBackgroundResource(modelClass.getImage());
         mTvTitle.setText(modelClass.getTitle());
         mTvDescription.setText(modelClass.getDescription());

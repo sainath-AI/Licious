@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.EggsAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
-public class EggsFragment extends Fragment {
+public class EggsFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public EggsFragment(){
 
@@ -47,7 +52,7 @@ public class EggsFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        EggsAdapter eggsAdapter=new EggsAdapter(modelClasses);
+        EggsAdapter eggsAdapter=new EggsAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(eggsAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -134,5 +139,17 @@ public class EggsFragment extends Fragment {
                 "MRP: ₹206", "The Licious Promise",
                 "Today 7 AM - 10 AM");
         modelClasses.add(egg_valuepack);
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
+
     }
 }

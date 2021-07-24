@@ -7,21 +7,29 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
+import com.masai.licious.Cart.CommunicationListner;
 import com.masai.licious.R;
+import com.masai.licious.fragments.ChickenFragment;
 
 
-public class PackageActivity extends AppCompatActivity {
+public class PackageActivity extends AppCompatActivity  {
 
 
     private ViewPager2 viewPager;
     private TabLayout tabLayout;
     private int position;
     ViewPagerAdapter adapter;
+    FragmentManager fragmentManager;
+    ModelClass model;
 
 
     @Override
@@ -30,10 +38,14 @@ public class PackageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_package);
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
-        FragmentManager fm=getSupportFragmentManager();
+        fragmentManager=getSupportFragmentManager();
         setViewPagerAdapter();
         getIntentData();
     }
+
+
+
+
 
     private void getIntentData() {
         if (getIntent() != null && getIntent().getExtras() != null) {
@@ -81,4 +93,19 @@ public class PackageActivity extends AppCompatActivity {
         });
 
     }
-}
+
+   // @Override
+//    public void onItemClick(ModelClass model,int position) {
+//        this.model=model;
+//        if (model!=null){
+////            Intent intent=new Intent(PackageActivity.this, CheckOutActivity.class);
+////            Bundle bundle=new Bundle();
+////            bundle.putString("Title",model.getTitle());
+////            bundle.putString("image",model.getImage()+"");
+////            bundle.putString("price",model.getPrice());
+////            bundle.putString("weight",model.getWeight());
+////            intent.putExtra("data",bundle);
+////            startActivity(intent);
+//
+//        }
+    }

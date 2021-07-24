@@ -3,12 +3,14 @@ package com.masai.licious.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.masai.licious.Cart.BuyItemClickListner;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
@@ -16,16 +18,18 @@ import java.util.ArrayList;
 public class SaverAdapter extends RecyclerView.Adapter<SaverViewHolder> {
 
     ArrayList<ModelClass> modelClassArrayList;
+    BuyItemClickListner listner;
 
-    public SaverAdapter(ArrayList<ModelClass> modelClassArrayList) {
+    public SaverAdapter(ArrayList<ModelClass> modelClassArrayList,BuyItemClickListner listner) {
         this.modelClassArrayList = modelClassArrayList;
+        this.listner=listner;
     }
 
     @NonNull
     @Override
     public SaverViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.chicken_item_layout,parent,false);
-        return new SaverViewHolder(view);
+        return new SaverViewHolder(view,listner);
     }
 
     @Override
@@ -43,10 +47,13 @@ class SaverViewHolder extends RecyclerView.ViewHolder {
 
     private ImageView mIvImage;
     private TextView mTvTitle, mTvDescription, mTvWeight, mTvPrice, mTvPlayVideo, mTvDeliveryTime;
+    Button mBtnAddToCart;
+    BuyItemClickListner listner;
 
 
-    public SaverViewHolder(@NonNull  View itemView) {
+    public SaverViewHolder(@NonNull  View itemView,BuyItemClickListner listner) {
         super(itemView);
+        this.listner=listner;
         iniViews(itemView);
     }
     private void iniViews(View itemView) {
@@ -57,9 +64,16 @@ class SaverViewHolder extends RecyclerView.ViewHolder {
         mTvPrice = itemView.findViewById(R.id.tvPrice);
         mTvPlayVideo = itemView.findViewById(R.id.tvPlayVideo);
         mTvDeliveryTime = itemView.findViewById(R.id.tvDeliveryTime);
+        mBtnAddToCart=itemView.findViewById(R.id.btnAddToCart);
     }
 
     public void setdata(ModelClass modelClass) {
+        mBtnAddToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listner.onItemClick(modelClass,getAdapterPosition());
+            }
+        });
         mIvImage.setBackgroundResource(modelClass.getImage());
         mTvTitle.setText(modelClass.getTitle());
         mTvDescription.setText(modelClass.getDescription());

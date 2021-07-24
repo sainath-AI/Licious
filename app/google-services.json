@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "167389520747",
+    "project_id": "licious-db0d5",
+    "storage_bucket": "licious-db0d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167389520747:android:64503c0c0337c93827a22e",
+        "android_client_info": {
+          "package_name": "com.masai.licious"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167389520747-mdm2uasmgo14667c7r492pc9uiu743v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVIRIGmxy0KQAKdYvb0beS2m5sz7d-B7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167389520747-mdm2uasmgo14667c7r492pc9uiu743v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import com.masai.licious.R;
 
-
 public class CheckFragment extends Fragment {
 
     private Button mBtnproceed;
@@ -51,7 +50,7 @@ public class CheckFragment extends Fragment {
 
     private void getBundleData() {
         if (getArguments() != null) {
-            name = getArguments().getString("name");
+            name = getArguments().getString("Title");
             mTvTitle.setText(name);
             price = getArguments().getString("price");
             mTvprice.setText(price);
@@ -66,7 +65,7 @@ public class CheckFragment extends Fragment {
     private void initView(View view) {
         mBtnproceed=view.findViewById(R.id.proceed);
         mIvImage=view.findViewById(R.id.imagedata);
-        mTvprice=view.findViewById(R.id.tvPrice);
+        mTvprice=view.findViewById(R.id.PriceData);
         mTvPrice2=view.findViewById(R.id.priceData2);
         mTvTitle=view.findViewById(R.id.titleData);
         mTvWieght=view.findViewById(R.id.WeightData);

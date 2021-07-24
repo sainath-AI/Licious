@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,8 @@ import com.masai.licious.LiciousWay;
 import com.masai.licious.NotificationActivity;
 import com.masai.licious.R;
 import com.masai.licious.ReferEarnActivity;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private RelativeLayout mRelativelayout;
     private ImageView mIvColdCuts;
     private ImageView mIvSaver;
+    private TextView mtvLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +66,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
+        mtvLocation=findViewById(R.id.city);
         imageSlider = findViewById(R.id.image_slider);
         mIvSearch = findViewById(R.id.search);
         mIvNotification = findViewById(R.id.bell);
@@ -101,6 +106,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIvLiciousWay.setOnClickListener(this);
         mIvReferFriend.setOnClickListener(this);
         mRelativelayout.setOnClickListener(this);
+        String location =getIntent().getStringExtra("Location");
+        mtvLocation.setText(location);
+
 
     }
 

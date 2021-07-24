@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.PrawnAdapter;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class PrawnFragment extends Fragment {
+public class PrawnFragment extends Fragment  implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public  static  PrawnFragment newInstance(){
         PrawnFragment prawnFragment=new PrawnFragment();
@@ -43,7 +48,7 @@ public class PrawnFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        PrawnAdapter prawnAdapter=new PrawnAdapter(modelClasses);
+        PrawnAdapter prawnAdapter=new PrawnAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(prawnAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -132,4 +137,17 @@ public class PrawnFragment extends Fragment {
         modelClasses.add(prawn_brown);
 
     }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
+
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.masai.licious.fragments;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +16,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ColdCutsAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class ColdCutsFragment extends Fragment {
+public class ColdCutsFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public  static ColdCutsFragment newInstance(){
         ColdCutsFragment coldcutsFragment=new ColdCutsFragment();
@@ -34,6 +40,18 @@ public class ColdCutsFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_coldcuts, container, false);
     }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -43,7 +61,7 @@ public class ColdCutsFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        ColdCutsAdapter coldCutsAdapter=new ColdCutsAdapter(modelClasses);
+        ColdCutsAdapter coldCutsAdapter=new ColdCutsAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(coldCutsAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -99,6 +117,18 @@ public class ColdCutsFragment extends Fragment {
                 "MRP: ₹299", "Enjoy Delicious Breakfast",
                 "Today 7 AM - 10 AM");
         modelClasses.add(cc_chickennuremberger);
+
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
     }
 

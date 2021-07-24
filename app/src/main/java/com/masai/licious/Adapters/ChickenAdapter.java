@@ -24,6 +24,7 @@ public class ChickenAdapter extends RecyclerView.Adapter<ChickenAdapter.ItemView
     public ChickenAdapter(ArrayList<ModelClass> modelClassArrayList, BuyItemClickListner listner) {
         this.modelClassArrayList = modelClassArrayList;
         this.listner = listner;
+
     }
 
     @NonNull
@@ -57,6 +58,24 @@ public class ChickenAdapter extends RecyclerView.Adapter<ChickenAdapter.ItemView
 
         }
 
+
+
+        public void setdata(ModelClass modelClass) {
+            mBtnAddToCart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listner.onItemClick(modelClass,getAdapterPosition());
+                }
+            });
+            mIvImage.setBackgroundResource(modelClass.getImage());
+            mTvTitle.setText(modelClass.getTitle());
+            mTvDescription.setText(modelClass.getDescription());
+            mTvWeight.setText(modelClass.getWeight());
+            mTvPrice.setText(modelClass.getPrice());
+            mTvPlayVideo.setText(modelClass.getPlayVideo());
+            mTvDeliveryTime.setText(modelClass.getDeliveryTime());
+
+        }
         private void iniViews(View itemView) {
             mIvImage = itemView.findViewById(R.id.ivImage);
             mTvTitle = itemView.findViewById(R.id.tvTitle);
@@ -66,22 +85,6 @@ public class ChickenAdapter extends RecyclerView.Adapter<ChickenAdapter.ItemView
             mTvPlayVideo = itemView.findViewById(R.id.tvPlayVideo);
             mTvDeliveryTime = itemView.findViewById(R.id.tvDeliveryTime);
             mBtnAddToCart = itemView.findViewById(R.id.btnAddToCart);
-        }
-
-        public void setdata(ModelClass modelClass) {
-            mIvImage.setBackgroundResource(modelClass.getImage());
-            mTvTitle.setText(modelClass.getTitle());
-            mTvDescription.setText(modelClass.getDescription());
-            mTvWeight.setText(modelClass.getWeight());
-            mTvPrice.setText(modelClass.getPrice());
-            mTvPlayVideo.setText(modelClass.getPlayVideo());
-            mTvDeliveryTime.setText(modelClass.getDeliveryTime());
-            mBtnAddToCart.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    listner.onItemClick(modelClass);
-                }
-            });
         }
     }
 }
