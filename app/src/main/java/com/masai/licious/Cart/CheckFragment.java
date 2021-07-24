@@ -2,65 +2,89 @@ package com.masai.licious.Cart;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.masai.licious.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CheckFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class CheckFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private Button mBtnproceed;
+    private ImageView mIvImage;
+    private TextView mTvTitle;
+    private TextView mTvprice;
+    private TextView mTvWieght;
+    private TextView mTvPrice2;
+    private String name;
+    private String price;
+    String weight;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    public CheckFragment() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CheckFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CheckFragment newInstance(String param1, String param2) {
-        CheckFragment fragment = new CheckFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_check, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull  View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView(view);
+        getBundleData();
+
+    }
+
+    private void getBundleData() {
+        if (getArguments() != null) {
+            name = getArguments().getString("name");
+            mTvTitle.setText(name);
+            price = getArguments().getString("price");
+            mTvprice.setText(price);
+            weight=getArguments().getString("weight");
+            mTvWieght.setText(weight);
+            mTvPrice2.setText(price);
+            mIvImage.setImageResource(getArguments().getInt("image"));
+
+        }
+    }
+
+    private void initView(View view) {
+        mBtnproceed=view.findViewById(R.id.proceed);
+        mIvImage=view.findViewById(R.id.imagedata);
+        mTvprice=view.findViewById(R.id.tvPrice);
+        mTvPrice2=view.findViewById(R.id.priceData2);
+        mTvTitle=view.findViewById(R.id.titleData);
+        mTvWieght=view.findViewById(R.id.WeightData);
+        mBtnproceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PaymentFragment paymentFragment=new PaymentFragment();
+                Bundle bundle =new Bundle();
+                bundle.putString("Name",name);
+                bundle.putString("Price",price);
+                bundle.putString("weight",weight);
+                paymentFragment .setArguments(bundle);
+                FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.flContainer1,paymentFragment,"paymentFragment").addToBackStack("paymentfragment").commit();
+
+            }
+        });
+
     }
 }
