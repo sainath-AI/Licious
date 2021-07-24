@@ -82,8 +82,8 @@
 
             <ImageView
                 android:id="@+id/cart"
-                android:layout_width="@dimen/dp_40"
-                android:layout_height="@dimen/dp_40"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/dp_5"
                 android:layout_toEndOf="@+id/bell"
@@ -100,14 +100,16 @@
         android:layout_height="@dimen/dp_80"
         android:layout_marginTop="@dimen/dp_50"
         android:background="#f5f5f5"
-        android:scrollbarSize="@dimen/dp_4"
+        android:scrollbarSize="@dimen/dp_3"
+        android:focusableInTouchMode="true"
         android:scrollbarThumbHorizontal="@drawable/scroll_bar">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/dp_18">
+            android:layout_marginStart="@dimen/dp_18"
+            android:layout_marginRight="@dimen/dp_18">
 
             <ImageView
                 android:id="@+id/fish"
@@ -191,7 +193,7 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/eggs"
+                android:layout_toEndOf="@id/prawn"
                 android:src="@drawable/kabab"
 
                 />
@@ -202,7 +204,7 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/prawn"
+                android:layout_toEndOf="@id/kabab"
                 android:src="@drawable/spreads"
 
                 />
@@ -215,17 +217,6 @@
                 android:layout_marginStart="25dp"
                 android:layout_toEndOf="@id/spreads"
                 android:src="@drawable/supersaver"
-
-                />
-
-            <ImageView
-                android:id="@+id/combos"
-                android:layout_width="@dimen/dp_45"
-                android:layout_height="@dimen/dp_45"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/saver"
-                android:src="@drawable/combos"
 
                 />
 

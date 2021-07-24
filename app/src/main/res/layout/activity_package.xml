@@ -102,11 +102,12 @@
         android:layout_below="@id/cardview3"
         android:focusableInTouchMode="true"
         app:tabGravity="fill"
-        app:tabIndicatorHeight="@dimen/dp_5"
+        app:tabIndicatorHeight="@dimen/dp_3"
         app:tabIndicatorColor="#ff0000"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="#ff2e2e"
-        app:tabTextColor="@color/black" />
+        app:tabTextColor="@color/black"
+        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
