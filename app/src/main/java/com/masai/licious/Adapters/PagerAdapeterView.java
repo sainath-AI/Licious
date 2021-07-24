@@ -9,8 +9,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.masai.licious.fragments.AlertFragment;
 
 import com.masai.licious.fragments.OfferFragment;
-
-
 public class PagerAdapeterView extends FragmentStateAdapter {
 
     public PagerAdapeterView(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
@@ -35,9 +33,4 @@ public class PagerAdapeterView extends FragmentStateAdapter {
     public int getItemCount() {
         return 2;
     }
-
-
-
-
-
 }
