@@ -8,7 +8,8 @@
         android:id="@+id/tvSkipOne"
         style="@style/loginSkip" />
 
-    <RelativeLayout style="@style/loginParentTwo">
+    <RelativeLayout style="@style/loginParentTwo"
+        android:backgroundTint="@color/grey">
 
         <TextView
             android:id="@+id/tvSigninSignupOne"

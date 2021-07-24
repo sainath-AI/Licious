@@ -46,14 +46,14 @@ public class PackageActivity extends AppCompatActivity {
     private void setViewPagerAdapter() {
        adapter=new ViewPagerAdapter(getSupportFragmentManager(),getLifecycle());
         viewPager.setAdapter(adapter);
-        tabLayout.addTab(tabLayout.newTab().setText("Fish/SeaFoods"));
+        tabLayout.addTab(tabLayout.newTab().setText("Fish & Seafood"));
         tabLayout.addTab(tabLayout.newTab().setText("Chicken"));
         tabLayout.addTab(tabLayout.newTab().setText("Mutton"));
-        tabLayout.addTab(tabLayout.newTab().setText("ReadyToCook"));
-        tabLayout.addTab(tabLayout.newTab().setText("ColdCuts"));
+        tabLayout.addTab(tabLayout.newTab().setText("Ready to Cook"));
+        tabLayout.addTab(tabLayout.newTab().setText("Cold Cuts"));
         tabLayout.addTab(tabLayout.newTab().setText("Eggs"));
         tabLayout.addTab(tabLayout.newTab().setText("Prawn"));
-        tabLayout.addTab(tabLayout.newTab().setText("Kabab/Tandoori"));
+        tabLayout.addTab(tabLayout.newTab().setText("Kebabs & Tandoor"));
         tabLayout.addTab(tabLayout.newTab().setText("Spreads"));
         tabLayout.addTab(tabLayout.newTab().setText("Saver"));
 
