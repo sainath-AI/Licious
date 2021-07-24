@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,18 +15,19 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.SaverAdapter;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class SaverFragment extends Fragment {
+public class SaverFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
 
-    public SaverFragment(){
 
-    }
     public  static  SaverFragment newInstance(){
         SaverFragment saverFragment=new SaverFragment();
         return saverFragment;
@@ -48,7 +50,7 @@ public class SaverFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        SaverAdapter saverAdapter=new SaverAdapter(modelClasses);
+        SaverAdapter saverAdapter=new SaverAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(saverAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -56,23 +58,6 @@ public class SaverFragment extends Fragment {
     }
 
     private void buildRecyclerViewData() {
-        ModelClass tangdi = new ModelClass(R.drawable.chicken_tangdi,
-                "Chicken Tangdi - Biryani Cut",
-                "Succulent and tender pieces of chicken that have been taken from the leg of the chicken, cut into drumsticks and whole thigh pieces. A mixture of white and dark meat these pieces of chicken are loaded with flavour and deliver mouth-watering goodness with every bite. Juicy and tender they are perfect for every kind of biryani, from Hyderabadi to Calicut biryani.\n" +
-                        "Order Chicken Tangdi - Biryani Cut online on Licious and get it delivered to your home.",
-                "Gross Wt. 600gms | Net wt. 550gms",
-                "MRP: ₹229", "Get value for money!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(tangdi);
-
-        ModelClass country = new ModelClass(R.drawable.chicken_country,
-                "Smoky Turmeric Country Chicken - Curry Cut With Skin",
-                "Smoky Turmeric Country Chicken is a traditional preparation of country chicken (Nati Koli) smoked & marinated in turmeric. This cut of chicken comes from the Aseel Cross Breed birds & offers a slightly tougher texture which is characteristic of authentic country chicken birds.\n" +
-                        "Known for its anti-bacterial & anti-inflammatory properties, turmeric is often used in a variety of marinades. Licious Smoky Turmeric Country Chicken allows for easy preparation of delicious curries and fries, with its perfectly cut pieces ideal for quick & easy cooking!",
-                "Gross Wt. 510gms | Net wt. 500gms",
-                "MRP: ₹349", "Only the Safest Chicken!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(country);
 
         ModelClass large = new ModelClass(R.drawable.chicken_large,
                 "Chicken Curry Cut Large - Large Pack",
@@ -82,63 +67,79 @@ public class SaverFragment extends Fragment {
                 "Today 7 AM - 10 AM");
         modelClasses.add(large);
 
-        ModelClass mince = new ModelClass(R.drawable.chicken_mince,
-                "Chicken Mince - Large Pack",
-                "Chicken Mince consists of Chicken Breast Fillets ground to perfection! Packed with proteins and minerals, Chicken Mince is a versatile meat that can be ideal for making patties, kebabs, keema, or meatballs. Order tender, fine-grained Chicken Mince online from Licious and get it delivered to your door.\n" +
+        ModelClass egg_classic30 = new ModelClass(R.drawable.egg_classic30,
+                "Classic Eggs - Pack Of 30",
+                "Obtained from humanely raised and healthy chickens, Classic Eggs from Licious are 100% natural. Eggs are high in proteins, omega-3 fatty acids, and vitamins. This pack of 30 eggs is ideal for families as well as for individuals focussing on a protein-heavy diet. These white-shelled eggs are farm fresh and perfect for omlettes or other fried forms or to be boiled.  Buy a pack of 30 Classic Eggs online and get them delivered straight to your doorstep.",
+                "Pieces 30",
+                "MRP: ₹255", "The Licious Promise",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(egg_classic30);
+
+        ModelClass prawngarlic = new ModelClass(R.drawable.spread_prawngralic,
+                "Chunky Butter Garlic Prawn Spread",
+                "At Licious, the ready-to-eat Chunky Butter Garlic Prawn Spread is a creamy base of butter and garlic with freshly cooked juicy, chunks of real prawn. Ready-to-eat, this spread is perfect for sandwiches, salads or canapé platters. The classic combo of butter and garlic with other spices and condiments gives this spread an authentic and mildly spicy taste. Our chunky meat spreads have zero trans-fat and are preservative free. Order online and get fresh Chunky Butter Garlic Prawns Spread home delivered.\n" +
                         "\n" +
-                        "Note: Licious Chicken is thoroughly cleaned before it is minced. You can cook it straight from the pack. To retain the taste, texture and flavour of the mince, please do not wash it.",
-                "Gross Wt. 1130gms | Net wt. 900gms",
-                "MRP: ₹479", "Only the Safest Chicken!",
+                        "Disclaimer: Best Before 30 Days from the date of manufacture.",
+                "Gross Wt. 200gms | Net wt. 200gms",
+                "MRP: ₹249", "How to Use Chunky Prawn Spreads",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(mince);
+        modelClasses.add(prawngarlic);
 
-        ModelClass breast = new ModelClass(R.drawable.chicken_breast,
-                "Chicken Breast Fillet - Thinly Sliced",
-                "Chicken Breast is one of the meatier cuts of a chicken, which comes from the breast-bone of the bird. This fillet cut is skinless and thinly sliced for more even cooking. A good source of vitamins and minerals, Chicken Breast, is also a great choice for a lean protein diet. Apply a flavourful spice-rub and pan-fry, bake or the Chicken Breast Fillet to relish this versatile cut.",
-                "Gross Wt. 1303gms | Net wt. 450gms",
-                "MRP: ₹259", "Find cuts for every recipe",
+        ModelClass egg_classic12 = new ModelClass(R.drawable.egg_classic12,
+                "Classic Eggs - Pack Of 12",
+                "These Classic Eggs are fresh, crack-free and laid by healthy chickens. A good source of vitamins and minerals, these eggs are nutritious and perfect for curries, salads or other egg preparations. Available as a pack of 12.",
+                "Pieces 12",
+                "MRP: ₹95", "The Licious Promise",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(breast);
+        modelClasses.add(egg_classic12);
 
-        ModelClass lollipop = new ModelClass(R.drawable.chicken_lollipop,
-                "Chicken Lollipop",
-                "Chicken Lollipops at Licious are expertly cleaned, cut and trimmed. The meat is cut loose from the wing bone and pushed down towards the end of the drumstick. Chicken Lollipops are rich in flavour and tender in texture. They are ideal for a protein-rich meal. Chicken Lollipops can be pan-fried or deep-fried to make perfect starters. The meat turns juicy and succulent after cooking. Order Chicken Lollipops from Licious and prepare crispy fried lollipops at home.",
-                "Gross Wt. 10 | Net wt. 10",
-                "MRP: ₹129", "Get value for money!",
+        ModelClass rtcKebabPlatter = new ModelClass(R.drawable.rtc_kebabplatter,
+                "Assorted Kebab Platter | Ready to Cook",
+                "Indulge in our Nawabi-style kebabs as you watch the gentleman’s game! The platter consists of Afghani Murgh Seekh Kebab, Purani Dilli Mutton Seekh Kebab & Lucknowi Galouti Kebab - each ready within 8 minutes!\n" +
+                        "\n" +
+                        "Note: Use within 15 days from the date of manufacture. FSSAI Category 8.3.2: Heat-treated processed comminuted meat and poultry products.",
+                "Pieces 14 | Net wt. 14",
+                "MRP: ₹798", "How To Cook",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(lollipop);
+        modelClasses.add(rtcKebabPlatter);
 
-        ModelClass gizzard = new ModelClass(R.drawable.chicken_gizzard,
-                "Chicken Gizzard",
-                "Chicken Gizzards from Licious are freshly cut and thoroughly cleaned. Obtained from the muscular areas around the digestive tract of the bird, the Gizzards have a unique and strong flavour and are firm in texture. They are also a rich source of proteins and vitamins. Chicken Gizzards have a low fat content and can be braised or used in starters when fried. Order Chicken Gizzards online from Licious to enjoy home-made fried gizzards or chicken gizzard masala.",
-                "Gross Wt. 303gms | Net wt. 300gms",
-                "MRP: ₹55", "Find cuts for every recipe",
+        ModelClass chickenshawarma = new ModelClass(R.drawable.spread_chickenshawarma,
+                "Chunky Shawarma Chicken Spread",
+                "Get the authentic smoky taste of Shawarma meat roasted on a rotisserie in our Chunky Shawarma Chicken Spread. This ready-to-eat spread is made of a flavourful, creamy base that includes crushed black peppers, garlic, freshly roasted chicken chunks and a subtle hint of chilli. High in protein, this Shawarma Spread is a delight for your Greek salad or mini pitas. Our chunky meat spreads have zero trans-fat and are preservative free. Order Chunky Shawarma Chicken Spread online from Licious and get home delivery.\n" +
+                        "\n" +
+                        "Disclaimer: Best Before 30 Days from the date of manufacture.",
+                "Gross Wt. 200gms | Net wt. 200gms",
+                "MRP: ₹199", "How to Use Chunky Chicken Spreads",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(gizzard);
+        modelClasses.add(chickenshawarma);
 
-        ModelClass drumstick = new ModelClass(R.drawable.chicken_drumstick,
-                "Chicken Drumstick",
-                "Our skinless and bone-in Chicken Drumsticks are cut from the lower leg portions. These juicy portions are flavourful and tender while being one of the fleshiest cuts of the bird. They contain a little more fat as compared to chicken wings. In terms of nutrients, these succulent portions are high in proteins and vitamins. Thoroughly cleaned and cut, these drumsticks are ideal for grilled or fried dishes. Order online from Licious and get fresh Chicken Drumsticks home delivered.",
-                "Gross Wt. 666gms | Net wt. 500gms",
-                "MRP: ₹235", "Only the Safest Chicken!",
+        ModelClass vanjaram = new ModelClass(R.drawable.fish_vanjaram,
+                "Seer (Vanjaram/Surmai) Small - Steaks",
+                "The reigning universal favourite! Cut into firm, delectable steaks, the unmistakable sharp flavour is bound to gratify and satisfy a great deal. Beautifully carved and handled carefully, bite into the welcoming taste of pure and rich, just off the water seer. It isn't considered one of the popular fishes for nothing.",
+                "Gross Wt. 704gms | Net wt. 500gms",
+                "MRP: ₹899", "See why your meat is safe",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(drumstick);
+        modelClasses.add(vanjaram);
 
-        ModelClass liver = new ModelClass(R.drawable.chicken_liver,
-                "Chicken Liver",
-                "At Licious, the Chicken Liver is fresh and thoroughly cleaned and cut into pieces. The chicken liver has a strong flavour and a smooth texture when raw which turns to being dense when cooked. Obtained from farm-raised, healthy chickens, the chicken liver is a rich source of vitamins, protein, and iron. Ideal for pan-fried or stir-fried dishes, you can prepare delicious Chicken Liver Masala with a blend of spices and herbs. Buy Chicken Liver online and get it delivered to your doorstep.",
-                "Gross Wt. 354gms | Net wt. 350gms",
-                "MRP: ₹65", "Find cuts for every recipe",
+        ModelClass egg_valuepack = new ModelClass(R.drawable.egg_valuepack,
+                "Classic Eggs Pack of 12 + Classic Eggs Pack of 12",
+                "Start your day with Classic Eggs - pack of 12, laid naturally and not cultured, perfect for curries, salads or other egg preparations. They are cleaned and safely packed to prevent breakage and have no anitibiotic residue. Buy Classic Eggs - Pack Of 12 only on Licious.",
+                "Pieces 12",
+                "MRP: ₹206", "The Licious Promise",
                 "Today 7 AM - 10 AM");
-        modelClasses.add(liver);
+        modelClasses.add(egg_valuepack);
 
-        ModelClass thigh = new ModelClass(R.drawable.chicken_thigh,
-                "Chunkier Chicken Thigh with Bone",
-                "Bone-in pieces of chicken thigh which have a moderate firm texture that turn juicy when cooked. Rich in proteins and minerals, this extra-meaty cut is ideal for slow-cooked preparations.",
-                "Gross Wt. 667gms | Net wt. 500gms",
-                "MRP: ₹239", "Only the Safest Chicken!",
-                "Today 7 AM - 10 AM");
-        modelClasses.add(thigh);
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
     }
 }

@@ -22,6 +22,8 @@ public class CheckOutActivity extends AppCompatActivity {
         fragmentManager=getSupportFragmentManager();
         getIntentData();
         launchFragment();
+
+
     }
 
     private void launchFragment() {
@@ -34,7 +36,7 @@ public class CheckOutActivity extends AppCompatActivity {
     private void getIntentData() {
         if (getIntent() != null && getIntent().getExtras() != null) {
             bundle = getIntent().getBundleExtra("data");
-            Log.d("tag", bundle.getString("name"));
+//            Log.d("tag", bundle.getString("name"));
         }
     }
 }

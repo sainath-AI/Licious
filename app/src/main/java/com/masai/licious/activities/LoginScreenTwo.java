@@ -1,8 +1,11 @@
 package com.masai.licious.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +14,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.masai.licious.R;
+
+import static com.masai.licious.R.color.dark_grey;
+import static com.masai.licious.R.color.red;
 
 public class LoginScreenTwo extends AppCompatActivity {
 
@@ -36,22 +42,25 @@ public class LoginScreenTwo extends AppCompatActivity {
         String number = getIntent().getStringExtra("number");
         mEtMobileNumberTwo.setText(number);
         new Handler().postDelayed(new Runnable() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void run() {
-                mEtOtpTwo.setText("4 3 7 6 3 9");
-                mBtnConfirmOtpTwo.setBackgroundColor(R.drawable.rectangle_button);
+                mEtOtpTwo.setText("437639");
+                mBtnConfirmOtpTwo.setBackgroundColor(getColor(red));
             }
         },2500);
         mTvSkipTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //redirect to the home screen
+                Intent intent = new Intent(LoginScreenTwo.this,HomeActivity.class);
+                startActivity(intent);
             }
         });
         mTvEditNumberTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mEtMobileNumberTwo.getText().clear();
+                Intent intent = new Intent(LoginScreenTwo.this,LoginScreenOne.class);
+                startActivity(intent);
             }
         });
         mTvResendTwo.setOnClickListener(new View.OnClickListener() {
@@ -59,13 +68,16 @@ public class LoginScreenTwo extends AppCompatActivity {
             public void onClick(View v) {
                 mEtOtpTwo.getText().clear();
                 new Handler().postDelayed(new Runnable() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void run() {
-                        mEtOtpTwo.setText("5 4 8 2 7 3");
+                        mEtOtpTwo.setText("548273");
+                        mBtnConfirmOtpTwo.setBackgroundColor(getColor(red));
                     }
                 },2500);
             }
         });
+
         mBtnConfirmOtpTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.KababAdapter;
 import com.masai.licious.Adapters.ModelClass;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class KababFragment extends Fragment {
+public class KababFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
 
     public KababFragment(){
@@ -47,7 +52,7 @@ public class KababFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        KababAdapter kababAdapter=new KababAdapter(modelClasses);
+        KababAdapter kababAdapter=new KababAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(kababAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -121,6 +126,18 @@ public class KababFragment extends Fragment {
                 "MRP: ₹427", "How To Cook",
                 "Today 7 AM - 10 AM");
         modelClasses.add(rtcChickenPlatter);
+
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
     }
 

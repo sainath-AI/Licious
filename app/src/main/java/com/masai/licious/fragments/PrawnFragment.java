@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.PrawnAdapter;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class PrawnFragment extends Fragment {
+public class PrawnFragment extends Fragment  implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public  static  PrawnFragment newInstance(){
         PrawnFragment prawnFragment=new PrawnFragment();
@@ -43,7 +48,7 @@ public class PrawnFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        PrawnAdapter prawnAdapter=new PrawnAdapter(modelClasses);
+        PrawnAdapter prawnAdapter=new PrawnAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(prawnAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -99,5 +104,50 @@ public class PrawnFragment extends Fragment {
                 "Today 7 AM - 10 AM");
         modelClasses.add(prawn_seegadi);
 
+        ModelClass prawn_pink = new ModelClass(R.drawable.prawn_pink,
+                "Pink Shrimp (70C - 110C)- Cleaned & Deveined, No Tail",
+                "The succulent, sweet-tasting meat of the Pink Shrimp can be pan-fried and tossed into a salad or made into spicy pickles. This seawater speciality is found in coasts of Kerala & Karnataka. Enjoy Pink Shrimp 70C - 110C delivered fresh to your doorstep only on Licious!",
+                "Pieces | Net wt. ",
+                "MRP: ₹335", "The Safest Prawns, for you",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(prawn_pink);
+
+        ModelClass prawn_karrikadi = new ModelClass(R.drawable.prawn_karrikadi,
+                "Seawater Prawns 350Count/Kg (Karrikadi)- Cleaned & Deveined, No Tail",
+                "Most commonly used in the Chettinaad cuisine, these small sized prawns absorb spices quite well, making it the perfect choice to be used in pickles, spicy curries, pulao & biryani. Order Karrikadi Prawns peeled & deveined online on Licious and have it delivered to your doorstep within 90-120 minutes!",
+                "Gross Wt. 500gms | Net wt. 200gms",
+                "MRP: ₹349", "The Safest Prawns, for you",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(prawn_karrikadi);
+
+        ModelClass prawn_tigertail = new ModelClass(R.drawable.prawn_tigertail,
+                "Tiger Prawns (20C - 30C) - Cleaned & Deveined, with Tail",
+                "The flavourful Tiger Prawns are perfect for those who enjoy the strong flavours of seawater fish. Abundantly found in the west coasts of India, the Tiger Prawn is large and tender. It is cleaned, deveined and ready to cook straight out of the pack. Make mouthwatering jumbo prawn curry or even fried jumbo prawns. Order Tiger Prawns (20C - 30C) - Cleaned & Deveined, with Tail only on Licious.",
+                "Pieces | Net wt. ",
+                "MRP: ₹549", "The Safest Prawns, for you",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(prawn_tigertail);
+
+        ModelClass prawn_brown = new ModelClass(R.drawable.prawn_brown,
+                "Brown Shrimp 70Count - 110Count/Kg (Jhinga/ Seegadi) - Cleaned and Deveined No Tail",
+                "Packed full of flavour, Brown Shrimp also known as Bay shrimp or Sand shrimp can make any dish a comforting one. This small shellfish is similar in appearance to the prawn and can be pan-fried with veggies & is also perfect to be pickled. Order clean and deveined Brown Shrimps and get them delivered fresh to your kitchen.",
+                "Pieces | Net wt. ",
+                "MRP: ₹325", "The Safest Prawns, for you",
+                "Today 7 AM - 10 AM");
+        modelClasses.add(prawn_brown);
+
     }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
+
+    }
+
 }
