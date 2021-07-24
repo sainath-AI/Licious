@@ -8,10 +8,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_65"
-
-        />
+        android:layout_height="wrap_content" />
 
 
 </FrameLayout>

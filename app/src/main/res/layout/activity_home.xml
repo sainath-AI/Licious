@@ -100,6 +100,7 @@
         android:layout_height="@dimen/dp_80"
         android:layout_marginTop="@dimen/dp_50"
         android:background="#f5f5f5"
+        android:scrollbarSize="@dimen/dp_4"
         android:scrollbarThumbHorizontal="@drawable/scroll_bar">
 
         <RelativeLayout
@@ -114,7 +115,6 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/fish_and_seafood"
-
                 />
 
             <ImageView
@@ -153,14 +153,13 @@
                 />
 
             <ImageView
-                android:id="@+id/spreads"
+                android:id="@+id/coldcuts"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
                 android:layout_toEndOf="@id/readytocook"
-                android:src="@drawable/spreads"
-
+                android:src="@drawable/coldcuts"
 
                 />
 
@@ -170,9 +169,19 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/spreads"
+                android:layout_toEndOf="@id/coldcuts"
                 android:src="@drawable/eggs"
 
+                />
+
+            <ImageView
+                android:id="@+id/prawn"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@id/eggs"
+                android:src="@drawable/prawn"
 
                 />
 
@@ -185,42 +194,16 @@
                 android:layout_toEndOf="@id/eggs"
                 android:src="@drawable/kabab"
 
-
                 />
 
             <ImageView
-                android:id="@+id/prawn"
-                android:layout_width="@dimen/dp_45"
-                android:layout_height="@dimen/dp_45"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/kabab"
-                android:src="@drawable/prawn"
-
-
-                />
-
-            <ImageView
-                android:id="@+id/coldcuts"
+                android:id="@+id/spreads"
                 android:layout_width="@dimen/dp_45"
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
                 android:layout_toEndOf="@id/prawn"
-                android:src="@drawable/coldcuts"
-
-
-                />
-
-            <ImageView
-                android:id="@+id/combos"
-                android:layout_width="@dimen/dp_45"
-                android:layout_height="@dimen/dp_45"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/coldcuts"
-                android:src="@drawable/combos"
-
+                android:src="@drawable/spreads"
 
                 />
 
@@ -230,11 +213,22 @@
                 android:layout_height="@dimen/dp_45"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="25dp"
-                android:layout_toEndOf="@id/combos"
+                android:layout_toEndOf="@id/spreads"
                 android:src="@drawable/supersaver"
 
+                />
+
+            <ImageView
+                android:id="@+id/combos"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_45"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@id/saver"
+                android:src="@drawable/combos"
 
                 />
+
         </RelativeLayout>
 
     </HorizontalScrollView>

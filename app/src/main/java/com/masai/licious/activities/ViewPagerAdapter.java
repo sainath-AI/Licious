@@ -34,19 +34,19 @@ public class ViewPagerAdapter extends FragmentStateAdapter  {
             case 2:
                 return MuttonFragment.newInstance();
             case 3:
-                return ColdCutsFragment.newInstance();
-            case 4:
-                return EggsFragment.newInstance();
-            case 5:
-                return PrawnFragment.newInstance();
-            case 6:
-                return KababFragment.newInstance();
-            case 7:
-                return SaverFragment.newInstance();
-            case 8:
                 return ReadyToCookFragment.newInstance();
-            case 9:
+            case 4:
+                return ColdCutsFragment.newInstance();
+            case 5:
+                return EggsFragment.newInstance();
+            case 6:
+                return PrawnFragment.newInstance();
+            case 7:
+                return KababFragment.newInstance();
+            case 8:
                 return SpreadsFragment.newInstance();
+            case 9:
+                return SaverFragment.newInstance();
         }
         return null;
 
@@ -56,9 +56,4 @@ public class ViewPagerAdapter extends FragmentStateAdapter  {
     public int getItemCount() {
         return 10;
     }
-
-
-
-
-
 }
