@@ -18,9 +18,6 @@ public class AlertFragment extends Fragment {
         return alertFragment;
     }
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

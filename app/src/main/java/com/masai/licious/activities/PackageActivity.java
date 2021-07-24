@@ -49,13 +49,13 @@ public class PackageActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Fish/SeaFoods"));
         tabLayout.addTab(tabLayout.newTab().setText("Chicken"));
         tabLayout.addTab(tabLayout.newTab().setText("Mutton"));
+        tabLayout.addTab(tabLayout.newTab().setText("ReadyToCook"));
         tabLayout.addTab(tabLayout.newTab().setText("ColdCuts"));
         tabLayout.addTab(tabLayout.newTab().setText("Eggs"));
         tabLayout.addTab(tabLayout.newTab().setText("Prawn"));
         tabLayout.addTab(tabLayout.newTab().setText("Kabab/Tandoori"));
-        tabLayout.addTab(tabLayout.newTab().setText("Saver"));
-        tabLayout.addTab(tabLayout.newTab().setText("ReadyToCook"));
         tabLayout.addTab(tabLayout.newTab().setText("Spreads"));
+        tabLayout.addTab(tabLayout.newTab().setText("Saver"));
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

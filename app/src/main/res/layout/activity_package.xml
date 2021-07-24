@@ -102,6 +102,7 @@
         android:layout_below="@id/cardview3"
         android:focusableInTouchMode="true"
         app:tabGravity="fill"
+        app:tabIndicatorHeight="@dimen/dp_5"
         app:tabIndicatorColor="#ff0000"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="#ff2e2e"
