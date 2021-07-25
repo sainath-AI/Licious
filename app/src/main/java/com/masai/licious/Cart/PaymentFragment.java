@@ -1,11 +1,13 @@
 package com.masai.licious.Cart;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +16,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.masai.licious.R;
+import com.masai.licious.activities.HomeActivity;
 
 import org.w3c.dom.Text;
 
@@ -31,6 +35,7 @@ public class PaymentFragment extends Fragment {
    private  String price;
    private  String name;
    private String weight;
+   LottieAnimationView CartAnime;
    
     
 
@@ -59,7 +64,7 @@ public class PaymentFragment extends Fragment {
             mWeigth.setText(weight);
             subtotal.setText(price);
             imageView.setImageResource(getArguments().getInt("image"));
-            TotalPrice.setText("249");
+            TotalPrice.setText(price);
 
         }
     }
@@ -72,10 +77,22 @@ public class PaymentFragment extends Fragment {
         subtotal=view.findViewById(R.id.price11);
         TotalPrice=view.findViewById(R.id.TotalPrice11);
         imageView=view.findViewById(R.id.imagedata1);
+        CartAnime=view.findViewById(R.id.cartAnimation);
         mBtnPlaceOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Order placed successfully", Toast.LENGTH_SHORT).show();
+                mBtnPlaceOrder.setVisibility(View.INVISIBLE);
+                CartAnime.setVisibility(View.VISIBLE);
+                CartAnime.playAnimation();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent=new Intent(getContext(), HomeActivity.class);
+                        startActivity(intent);
+
+                    }
+                },6000);
+               // Toast.makeText(getContext(), "order successfull", Toast.LENGTH_SHORT).show();
             }
         });
     }
