@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.masai.licious.R;
 
-import static com.masai.licious.R.color.dark_grey;
 import static com.masai.licious.R.color.red;
 
 public class LoginScreenTwo extends AppCompatActivity {
