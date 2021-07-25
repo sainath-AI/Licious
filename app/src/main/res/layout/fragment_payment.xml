@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Cart.CheckFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Billing Details"
+        android:textSize="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_35"
+        android:layout_marginStart="@dimen/dp_25"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview11"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        app:cardElevation="@dimen/dp_20">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_150"
+                android:id="@+id/imagedata1"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imagedata1"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textColor="@color/red"
+                android:id="@+id/titleData1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleData1"
+                android:layout_toEndOf="@+id/imagedata1"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textColor="@color/red"
+                android:id="@+id/PriceData1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PriceData1"
+                android:layout_toEndOf="@+id/imagedata1"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textColor="@color/red"
+                android:id="@+id/WeightData1"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/DashView"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:layout_below="@id/cardview11"
+        android:layout_marginTop="@dimen/dp_45"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/dash_box" />
+    <TextView
+        android:id="@+id/billdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardview11"
+        android:layout_marginStart="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_60"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Billing Details:"
+        android:textSize="@dimen/dp_18"
+        />
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/billdetails"
+        android:layout_marginStart="@dimen/dp_40"
+        android:text="SubTotal"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textSize="16dp"
+        />
+    <TextView
+        android:id="@+id/DeliverCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtotal"
+        android:layout_marginStart="@dimen/dp_40"
+        android:text="DeliveryCharge"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textSize="16dp"
+        />
+    <TextView
+        android:id="@+id/TotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DeliverCharge"
+        android:layout_marginStart="@dimen/dp_40"
+        android:text="Total price"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/price11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/subtotal"
+        android:layout_below="@id/billdetails"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="190dp"
+
+        />
+    <TextView
+        android:id="@+id/Charge11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/subtotal"
+        android:layout_below="@id/price11"
+        android:layout_marginTop="20dp"
+        android:text="49"
+        android:layout_marginStart="220dp"
+        />
+    <TextView
+        android:id="@+id/TotalPrice11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/subtotal"
+        android:textColor="@color/black"
+        android:layout_below="@id/Charge11"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="190dp"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DashView"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="cash on delivery"
+        />
+    <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:backgroundTint="@color/red"
+                android:text="Place The Order"
+                android:id="@+id/placeorder"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_45"
+                android:layout_marginStart="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:textSize="@dimen/dp_18"
+
+
+                />
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
