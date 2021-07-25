@@ -11,27 +11,25 @@
       android:id="@+id/view"
       android:layout_width="match_parent"
       android:layout_height="60dp"
-      android:background="#2C2A2A"
-
-
-      />
+      android:background="#2C2A2A"/>
 
   <ImageButton
       android:id="@+id/igBack"
-      android:layout_width="49dp"
-      android:layout_height="40dp"
-      android:layout_marginTop="8dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp_15"
+      android:layout_marginStart="@dimen/dp_15"
       android:background="#2C2A2A"
       app:srcCompat="@drawable/whitebacksvg" />
+
   <TextView
       android:id="@+id/textView"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="@string/notifications"
+      android:layout_marginTop="@dimen/dp_15"
       android:gravity="center"
-      android:layout_marginStart="@dimen/dp_90"
-      android:layout_marginTop="@dimen/dp_12"
-      android:layout_toEndOf="@id/igBack"
+      android:layout_centerHorizontal="true"
       android:textColor="@color/white"
       android:textSize="18sp"
       />
@@ -39,13 +37,14 @@
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
       android:text="CLEAR"
-      android:layout_marginStart="@dimen/dp_85"
-      android:layout_toEndOf="@id/textView"
+      android:layout_marginTop="@dimen/dp_15"
+      android:layout_marginEnd="@dimen/dp_15"
+      android:layout_alignParentEnd="true"
       android:textColor="#555555"
       android:textSize="16sp"
       />
+
   <com.google.android.material.tabs.TabLayout
       android:id="@+id/tabLayout"
       android:layout_below="@id/view"
@@ -63,8 +62,6 @@
       android:layout_below="@id/tabLayout"
       android:layout_width="match_parent"
       android:layout_height="match_parent" />
-
-
 
 
 </RelativeLayout>

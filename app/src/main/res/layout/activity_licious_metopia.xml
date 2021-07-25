@@ -72,14 +72,37 @@
 
     </RelativeLayout>
 
+
     <View
         android:id="@+id/view11"
         android:layout_width="406dp"
         android:layout_height="319dp"
-        android:background="#f5f5f5"
+        android:background="@drawable/shape5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="327dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="327dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/shape5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
     <TextView
         android:id="@+id/textView30"
@@ -92,14 +115,88 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="313dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
+    <View
+        android:id="@+id/view12"
+        android:layout_width="327dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/shape5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="69 RS."
+        android:textColor="#EA3131"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view17"
+        app:layout_constraintEnd_toEndOf="@+id/view17"
+        app:layout_constraintTop_toTopOf="@+id/view17"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:text="99 RS."
+        android:textColor="#EA3131"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view16"
+        app:layout_constraintEnd_toEndOf="@+id/view16"
+        app:layout_constraintTop_toTopOf="@+id/view16" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:text="189 RS."
+        android:textColor="#EA3131"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view12"
+        app:layout_constraintEnd_toEndOf="@+id/view12"
+        app:layout_constraintTop_toTopOf="@+id/view12" />
+
+    <RadioGroup
+        android:layout_width="326dp"
+        android:layout_height="236dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view12"
+        app:layout_constraintEnd_toEndOf="@+id/view16"
+        app:layout_constraintStart_toStartOf="@+id/view16"
+        app:layout_constraintTop_toTopOf="@+id/view17"
+        app:layout_constraintVertical_bias="0.49">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="1 month plan"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:text="3 month plan"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="6 month plan"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,7 @@ public class CheckFragment extends Fragment {
 
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -77,6 +78,7 @@ public class CheckFragment extends Fragment {
                 bundle.putString("Name",name);
                 bundle.putString("Price",price);
                 bundle.putString("weight",weight);
+                bundle.putInt("image",R.drawable.chicken_tangdi);
                 paymentFragment .setArguments(bundle);
                 FragmentManager fragmentManager=getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();

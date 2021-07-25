@@ -51,6 +51,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
         initViews();
         setSliderImage();
+
+        /*mtvLocation=findViewById(R.id.city);
+
+        mtvLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, LoginScreenTwo.class);
+                startActivity(intent);
+            }
+        });
+
+        Intent intent = getIntent();
+        String location = intent.getStringExtra("location");
+        mtvLocation.setText(location);*/
     }
 
     private void setSliderImage() {
@@ -66,7 +80,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
-        mtvLocation=findViewById(R.id.city);
         imageSlider = findViewById(R.id.image_slider);
         mIvSearch = findViewById(R.id.search);
         mIvNotification = findViewById(R.id.bell);
@@ -106,9 +119,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIvLiciousWay.setOnClickListener(this);
         mIvReferFriend.setOnClickListener(this);
         mRelativelayout.setOnClickListener(this);
-        String location =getIntent().getStringExtra("Location");
-        mtvLocation.setText(location);
-
 
     }
 

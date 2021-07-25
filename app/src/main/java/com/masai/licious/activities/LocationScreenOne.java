@@ -25,7 +25,7 @@ private static final int REQ_CODE=101;
         TvDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LocationScreenOne.this, LocationScreenTwo.class);
+                Intent intent=new Intent(LocationScreenOne.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

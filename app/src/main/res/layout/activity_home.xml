@@ -252,17 +252,17 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView1"
-                android:layout_width="@dimen/dp_180"
-                android:layout_height="110dp"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_100"
                 android:layout_below="@id/metopiaJoin"
                 android:layout_marginStart="@dimen/dp_10"
-                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginBottom="@dimen/dp_5"
                 app:cardElevation="@dimen/dp_50">
 
                 <ImageView
                     android:id="@+id/licious1"
-                    android:layout_width="@dimen/dp_180"
+                    android:layout_width="@dimen/dp_160"
                     android:layout_height="@dimen/dp_100"
                     android:padding="@dimen/dp_10"
                     android:src="@drawable/licious1" />
@@ -271,20 +271,20 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
-                android:layout_width="@dimen/dp_180"
-                android:layout_height="110dp"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="@dimen/dp_100"
                 android:layout_below="@id/metopiaJoin"
-                android:layout_marginStart="@dimen/dp_12"
-                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginBottom="@dimen/dp_5"
                 android:layout_toEndOf="@+id/cardView1"
                 app:cardElevation="@dimen/dp_25">
 
                 <ImageView
                     android:id="@+id/referNow"
-                    android:layout_width="@dimen/dp_180"
+                    android:layout_width="@dimen/dp_160"
                     android:layout_height="@dimen/dp_100"
-                    android:padding="@dimen/dp_10"
+                    android:padding="@dimen/dp_5"
                     android:src="@drawable/referfriend" />
             </androidx.cardview.widget.CardView>
 
@@ -297,7 +297,7 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/best_sellers"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sp_22" />
+                android:textSize="@dimen/sp_20" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -393,7 +393,9 @@
                         android:paddingEnd="-195dp"
                         android:src="@drawable/meat" />
                 </RelativeLayout>
+
             </HorizontalScrollView>
+
         </RelativeLayout>
 
 

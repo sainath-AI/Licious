@@ -43,5 +43,6 @@
     <string name="use_my_current_location">Use my current location</string>
     <string name="notifications">Notifications</string>
     <string name="fish_and_seafood"><![CDATA[Fish & Seafood]]></string>
+    <string name="explore">Explore by category</string>
 
 </resources>
