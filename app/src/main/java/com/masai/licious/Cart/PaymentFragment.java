@@ -64,7 +64,7 @@ public class PaymentFragment extends Fragment {
             mWeigth.setText(weight);
             subtotal.setText(price);
             imageView.setImageResource(getArguments().getInt("image"));
-            TotalPrice.setText(" rs: 249");
+            TotalPrice.setText(price);
 
         }
     }

@@ -137,9 +137,9 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/subtotal"
         android:layout_below="@id/price11"
-        android:layout_marginTop="20dp"
-        android:text="49"
-        android:layout_marginStart="220dp"
+        android:layout_marginTop="10dp"
+        android:text="free delivery"
+        android:layout_marginStart="190dp"
         />
     <TextView
         android:id="@+id/TotalPrice11"
@@ -148,7 +148,7 @@
         android:layout_toEndOf="@id/subtotal"
         android:textColor="@color/black"
         android:layout_below="@id/Charge11"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="190dp"
         />
 
