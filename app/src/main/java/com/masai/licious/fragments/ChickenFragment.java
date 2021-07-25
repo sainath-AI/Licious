@@ -1,6 +1,7 @@
 package com.masai.licious.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -17,17 +18,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.masai.licious.Adapters.ChickenAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.Cart.CommunicationListner;
 import com.masai.licious.R;
+import com.masai.licious.activities.PackageActivity;
 
 import java.util.ArrayList;
 
 public class ChickenFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
-    private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ArrayList<ModelClass> modelClasses = new ArrayList<>();
     private ModelClass model;
-    CommunicationListner listner;
+
 
     public static ChickenFragment newInstance() {
         ChickenFragment chickenFragment = new ChickenFragment();
@@ -55,14 +58,14 @@ public class ChickenFragment extends Fragment implements BuyItemClickListner {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         buildRecyclerViewData();
         setRecyclerdata();
     }
 
     private void setRecyclerdata() {
-        ChickenAdapter chickenAdapter=new ChickenAdapter(modelClasses,this);
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
+        ChickenAdapter chickenAdapter = new ChickenAdapter(modelClasses, this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setAdapter(chickenAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -156,14 +159,19 @@ public class ChickenFragment extends Fragment implements BuyItemClickListner {
     }
 
     @Override
-    public void onItemClick(ModelClass model) {
-        if (model != null) {
-            this.model = model;
-            listner.onItemClick(model);
-        }
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
+
     }
-    public void setListner(CommunicationListner listner) {
-        Log.d("tag","here i am getting the listner");
-        this.listner = listner;
-    }
+//    public void setListner(CommunicationListner listner) {
+//        Log.d("tag","here i am getting the listner");
+//        this.listner = listner;
+//    }
 }

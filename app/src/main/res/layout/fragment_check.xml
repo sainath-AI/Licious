@@ -72,10 +72,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/cardview11"
         app:cardElevation="@dimen/dp_20"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="330dp"
         android:id="@+id/card2"
-        android:layout_marginStart="@dimen/dp_20"
-        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -89,7 +89,7 @@
                 android:id="@+id/tvtotal"
                 android:layout_marginStart="@dimen/dp_10"
                 android:layout_marginTop="10dp"
-                android:textSize="@dimen/dp_20"
+                android:textSize="@dimen/sp_20"
                 />
             <TextView
                 android:id="@+id/priceData2"
@@ -98,6 +98,7 @@
                 android:layout_toEndOf="@id/tvtotal"
                 android:layout_marginTop="@dimen/dp_10"
                 android:layout_marginStart="@dimen/dp_8"
+                android:textSize="@dimen/sp_18"
 
 
                 />

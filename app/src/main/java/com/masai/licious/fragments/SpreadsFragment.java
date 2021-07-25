@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,15 +15,19 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.SpreadsAdapter;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class SpreadsFragment extends Fragment {
+public class SpreadsFragment extends Fragment implements BuyItemClickListner {
 
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public SpreadsFragment(){
 
@@ -48,7 +53,7 @@ public class SpreadsFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        SpreadsAdapter spreadsAdapter=new SpreadsAdapter(modelClasses);
+        SpreadsAdapter spreadsAdapter=new SpreadsAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(spreadsAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -163,6 +168,18 @@ public class SpreadsFragment extends Fragment {
                 "MRP: ₹199", "How to Use Chunky Chicken Spreads",
                 "Today 7 AM - 10 AM");
         modelClasses.add(chickencontinental);
+
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
     }
 }

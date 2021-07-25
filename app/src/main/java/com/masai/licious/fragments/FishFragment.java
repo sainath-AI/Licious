@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import com.masai.licious.Adapters.FishAdapter;
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.Cart.CommunicationListner;
 import com.masai.licious.R;
 
@@ -27,7 +29,6 @@ public class FishFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
     ModelClass model;
-    CommunicationListner listner;
 
     public  static  FishFragment newInstance(){
         FishFragment fishFragment=new FishFragment();
@@ -50,7 +51,7 @@ public class FishFragment extends Fragment implements BuyItemClickListner {
     }
 
     private void setRecyclerdata() {
-        FishAdapter fishAdapter=new FishAdapter(modelClasses);
+        FishAdapter fishAdapter=new FishAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(fishAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -141,21 +142,15 @@ public class FishFragment extends Fragment implements BuyItemClickListner {
     }
 
     @Override
-    public void onItemClick(ModelClass model) {
-        if (model != null) {
-            this.model = model;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    listner.onItemClick(model);
-                }
-            },1000);
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
-        }
-    }
-
-    public void setListner(CommunicationListner listner) {
-        Log.d("tag","here i am getting the listner");
-        this.listner = listner;
     }
 }

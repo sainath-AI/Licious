@@ -1,5 +1,6 @@
 package com.masai.licious.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,14 +15,18 @@ import android.view.ViewGroup;
 
 import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.Adapters.MuttonAdapter;
+import com.masai.licious.Cart.BuyItemClickListner;
+import com.masai.licious.Cart.CheckOutActivity;
 import com.masai.licious.R;
 
 import java.util.ArrayList;
 
 
-public class MuttonFragment extends Fragment {
+public class MuttonFragment extends Fragment implements BuyItemClickListner {
     private RecyclerView recyclerView;
     private ArrayList<ModelClass> modelClasses=new ArrayList<>();
+    private ModelClass model;
+
 
     public  static  MuttonFragment newInstance(){
         MuttonFragment muttonFragment=new MuttonFragment();
@@ -43,7 +48,7 @@ public class MuttonFragment extends Fragment {
     }
 
     private void setRecyclerdata() {
-        MuttonAdapter muttonAdapter=new MuttonAdapter(modelClasses);
+        MuttonAdapter muttonAdapter=new MuttonAdapter(modelClasses,this);
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(getContext());
         recyclerView.setAdapter(muttonAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -131,6 +136,18 @@ public class MuttonFragment extends Fragment {
                 "MRP: ₹199", "The Licious Promise",
                 "Today 7 AM - 10 AM");
         modelClasses.add(kapura);
+
+    }
+    @Override
+    public void onItemClick(ModelClass model, int pos) {
+        Intent intent=new Intent(getActivity(), CheckOutActivity.class);
+        Bundle bundle=new Bundle();
+        bundle.putString("Title",model.getTitle());
+        bundle.putInt("image",model.getImage());
+        bundle.putString("price",model.getPrice());
+        bundle.putString("weight",model.getWeight());
+        intent.putExtra("data",bundle);
+        startActivity(intent);
 
     }
 
