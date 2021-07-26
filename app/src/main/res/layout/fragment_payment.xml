@@ -71,12 +71,13 @@
     <View
         android:id="@+id/DashView"
         android:layout_width="match_parent"
-        android:layout_height="187dp"
+        android:layout_height="185dp"
         android:layout_below="@id/cardview11"
-        android:layout_marginTop="@dimen/dp_25"
         android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="@dimen/dp_20"
         android:background="@drawable/dash_box" />
+
     <TextView
         android:id="@+id/billdetails"
         android:layout_width="wrap_content"
@@ -120,37 +121,38 @@
         android:textSize="18dp"
         android:textColor="@color/black"
         />
+
     <TextView
         android:id="@+id/price11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/subtotal"
         android:layout_below="@id/billdetails"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="41dp"
+        android:layout_toEndOf="@id/subtotal"
         android:textColor="@color/black"
-        android:layout_marginStart="190dp"
 
         />
+
     <TextView
         android:id="@+id/Charge11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/subtotal"
         android:layout_below="@id/price11"
-        android:layout_marginTop="10dp"
-        android:text="free delivery"
-        android:layout_marginStart="190dp"
-        />
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="-2dp"
+        android:layout_toEndOf="@id/subtotal"
+        android:text="free delivery" />
+
     <TextView
         android:id="@+id/TotalPrice11"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/subtotal"
-        android:textColor="@color/black"
+        android:layout_height="32dp"
         android:layout_below="@id/Charge11"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="190dp"
-        />
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@id/subtotal"
+        android:textColor="@color/black" />
 
     <CheckBox
         android:layout_width="wrap_content"

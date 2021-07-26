@@ -262,7 +262,7 @@
 
                 <ImageView
                     android:id="@+id/licious1"
-                    android:layout_width="@dimen/dp_180"
+                    android:layout_width="@dimen/dp_160"
                     android:layout_height="@dimen/dp_100"
                     android:padding="@dimen/dp_10"
                     android:src="@drawable/licious1" />
@@ -282,9 +282,9 @@
 
                 <ImageView
                     android:id="@+id/referNow"
-                    android:layout_width="@dimen/dp_180"
+                    android:layout_width="@dimen/dp_160"
                     android:layout_height="@dimen/dp_100"
-                    android:padding="@dimen/dp_10"
+                    android:padding="@dimen/dp_8"
                     android:src="@drawable/referfriend" />
             </androidx.cardview.widget.CardView>
 
