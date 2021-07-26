@@ -29,11 +29,6 @@ public class CheckFragment extends Fragment {
     private String price;
     String weight;
 
-
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
