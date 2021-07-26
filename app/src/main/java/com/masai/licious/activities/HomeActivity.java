@@ -120,6 +120,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mIvReferFriend.setOnClickListener(this);
         mRelativelayout.setOnClickListener(this);
 
+        //String location =getIntent().getStringExtra("Location");
+        //mtvLocation.setText(location);
+
+
     }
 
     @Override

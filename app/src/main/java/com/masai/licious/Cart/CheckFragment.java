@@ -1,5 +1,7 @@
 package com.masai.licious.Cart;
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.masai.licious.Adapters.ModelClass;
 import com.masai.licious.R;
 
 public class CheckFragment extends Fragment {
@@ -28,6 +31,8 @@ public class CheckFragment extends Fragment {
     private String name;
     private String price;
     String weight;
+    Bitmap bitmap;
+    ModelClass modelClass;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
