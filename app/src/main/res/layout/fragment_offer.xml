@@ -11,12 +11,12 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_200"
+        android:layout_width="351dp"
+        android:layout_height="190dp"
         android:layout_marginTop="124dp"
         android:src="@drawable/notificationpic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.733"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
         android:id="@+id/textView32"
         android:layout_width="303dp"
         android:layout_height="55dp"
-        android:text="Don't worry ,you can explore these other options meanwhile"
+        android:text="Don't worry, you can explore these other options meanwhile"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

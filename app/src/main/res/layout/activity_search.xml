@@ -98,10 +98,10 @@
         android:layout_width="@dimen/dp_60"
         android:layout_height="@dimen/dp_60"
         android:layout_marginStart="@dimen/dp_24"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="312dp"
         android:layout_marginEnd="@dimen/dp_40"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/supersaverpacks" />
@@ -110,8 +110,8 @@
         android:id="@+id/imageView7"
         android:layout_width="@dimen/dp_60"
         android:layout_height="@dimen/dp_70"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="312dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/prawn" />
@@ -120,8 +120,8 @@
         android:id="@+id/imageView8"
         android:layout_width="@dimen/dp_60"
         android:layout_height="@dimen/dp_60"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="312dp"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/coldcuts" />
@@ -152,7 +152,8 @@
             android:hint="What are you craving for ?"
             android:inputType="textPersonName"
             android:paddingEnd="@dimen/dp_50"
-            android:textSize="@dimen/sp_20"/>
+            android:textAlignment="center"
+            android:textSize="@dimen/sp_20" />
 
         <ImageButton
             android:id="@+id/igbtncarts"
@@ -198,8 +199,8 @@
         android:id="@+id/imageView5"
         android:layout_width="@dimen/dp_60"
         android:layout_height="@dimen/dp_60"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="312dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toBottomOf="@+id/textView15"
         app:srcCompat="@drawable/combos" />
@@ -221,14 +222,14 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mutton Mania"
+        android:text="Mutton"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView22"
         app:layout_constraintEnd_toEndOf="@+id/imageView28"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="@+id/imageView28"
         app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:layout_constraintVertical_bias="0.241" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/textView18"
@@ -265,9 +266,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/imageView23"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="@+id/imageView23"
         app:layout_constraintTop_toBottomOf="@+id/imageView23"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.476" />
 
     <TextView
         android:id="@+id/textView21"
@@ -277,9 +279,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="@+id/imageView22"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/imageView22"
         app:layout_constraintTop_toBottomOf="@+id/imageView22"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintVertical_bias="0.476" />
 
     <TextView
         android:id="@+id/textView22"
@@ -296,8 +299,8 @@
 
     <TextView
         android:id="@+id/textView23"
-        android:layout_width="65dp"
-        android:layout_height="24dp"
+        android:layout_width="63dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="28dp"
         android:text="Kabab &amp; Tandoor"
         android:textColor="@color/black"
@@ -351,12 +354,12 @@
         android:id="@+id/textView27"
         android:layout_width="77dp"
         android:layout_height="46dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:text="Super Saver Packs"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 

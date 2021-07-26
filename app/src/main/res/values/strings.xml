@@ -44,5 +44,6 @@
     <string name="notifications">Notifications</string>
     <string name="fish_and_seafood"><![CDATA[Fish & Seafood]]></string>
     <string name="explore">Explore by category</string>
+    <string name="your_cart">Your Cart</string>
 
 </resources>

@@ -20,13 +20,15 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Refer&amp;Earn"
+        android:text="Refer and Earn"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.571" />
 
     <ImageButton
         android:id="@+id/igBackbtn1"
@@ -42,8 +44,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="412dp"
-        android:layout_height="165dp"
+        android:layout_width="387dp"
+        android:layout_height="166dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -128,8 +130,8 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="357dp"
+        android:layout_height="52dp"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="@dimen/dp_15"
@@ -141,10 +143,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:layout_marginStart="@dimen/dp_10"
         android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="@dimen/dp_10"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_10"
         android:background="@drawable/shape5"
