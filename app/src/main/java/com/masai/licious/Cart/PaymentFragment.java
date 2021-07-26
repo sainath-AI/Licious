@@ -1,6 +1,7 @@
 package com.masai.licious.Cart;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -36,6 +37,7 @@ public class PaymentFragment extends Fragment {
    private  String name;
    private String weight;
    LottieAnimationView CartAnime;
+   Bitmap bitmap;
    
     
 
@@ -63,6 +65,8 @@ public class PaymentFragment extends Fragment {
             weight=getArguments().getString("weight");
             mWeigth.setText(weight);
             subtotal.setText(price);
+           // bitmap=getArguments().getParcelable("bitmap");
+           // imageView.setImageBitmap(bitmap);
             imageView.setImageResource(getArguments().getInt("image"));
             TotalPrice.setText(price);
 
