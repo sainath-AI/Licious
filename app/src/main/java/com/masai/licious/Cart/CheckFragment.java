@@ -34,11 +34,6 @@ public class CheckFragment extends Fragment {
     Bitmap bitmap;
     ModelClass modelClass;
 
-
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

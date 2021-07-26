@@ -24,8 +24,8 @@ public class LocationScreenTwo extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LocationScreenTwo.this, HomeActivity.class);
                 String location=etLocation.getText().toString();
+                Intent intent=new Intent(LocationScreenTwo.this, HomeActivity.class);
                 intent.putExtra("location",location);
                 startActivity(intent);
             }

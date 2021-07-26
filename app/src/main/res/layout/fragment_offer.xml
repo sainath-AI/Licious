@@ -13,10 +13,10 @@
         android:id="@+id/imageView9"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_200"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="124dp"
         android:src="@drawable/notificationpic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,12 +47,14 @@
         android:id="@+id/view13"
         android:layout_width="149dp"
         android:layout_height="133dp"
+        android:background="@drawable/referfriendssmallpic"
+        android:src="@drawable/shape7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/shape7"
-        android:background="@drawable/referfriendssmallpic"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/textView32"
+        app:layout_constraintVertical_bias="0.34" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -65,12 +67,14 @@
         android:id="@+id/view14"
         android:layout_width="149dp"
         android:layout_height="133dp"
+        android:background="@drawable/metopiasmallpic"
+        android:src="@drawable/shape7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/shape7"
-        android:background="@drawable/metopiasmallpic"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/textView32"
+        app:layout_constraintVertical_bias="0.34" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
